@@ -16,12 +16,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'css?sourceMap'
+                loader: 'style!' + 'resolve-url!' + 'css?sourceMap'
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'css?sourceMap' + '!sass?sourceMap'
+                loader: 'style!' + 'resolve-url!' + 'css?sourceMap' + '!sass?sourceMap'
             },
             {
                 test: /\.(js|jsx)$/,
@@ -30,8 +30,7 @@ module.exports = {
                 query: {
                     cacheDirectory: true,
                     presets: ['es2015', 'react']
-            }
-                
+                }
             },
             {
                 test: /\.(json)$/,
@@ -42,8 +41,11 @@ module.exports = {
                 test: /\.(svg|ttf|woff|woff2|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 exclude: /node_modules/,
                 loader: "url-loader"
-            }
-            
+            },
+            {
+                test: /\.png/, 
+                loader: 'url?limit=100000&minetype=image/png' 
+            },
         ]
     },
     

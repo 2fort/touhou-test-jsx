@@ -6,59 +6,40 @@ import ReactDOM from 'react-dom';
 import { Characters } from './json/characters.js';
 import OneStep from './classes/OneStep.js';
 
-class PrevButton extends React.Component{
-    render() {
-        return (
-            <div className="navigation">
-                <button type="button" id="prev" className={this.props.color} onClick={() => this.props.changeStep('prev')}>
-                    <span>&nbsp;&lt;&nbsp;</span>
-                </button>
-            </div>
-        )
-    }
-};
+const PrevButton = (props) => (
+    <div className="navigation">
+        <button type="button" id="prev" className={props.color} onClick={() => props.changeStep('prev')}>
+            <span>&nbsp;&lt;&nbsp;</span>
+        </button>
+    </div>
+);
 
-class NextButton extends React.Component{
-    render() {
-        return (
-            <div className="navigation">
-                <button type="button" id="next" className={this.props.color} onClick={() => this.props.changeStep('next')}>
-                    <span>&nbsp;&gt;&nbsp;</span>
-                </button>
-            </div>
-        )
-    }
-};
+const NextButton = (props) => (
+    <div className="navigation">
+        <button type="button" id="next" className={props.color} onClick={() => props.changeStep('next')}>
+            <span>&nbsp;&gt;&nbsp;</span>
+        </button>
+    </div>
+);
 
-class CharacterImage extends React.Component{
-    render() {
-        return (
-            <div className="character">
-                <img alt="character" 
-                    id="character-image" 
-                    src={"src/images/scale/" + this.props.image}
-                />
-            </div>
-        )
-    }
-};
+const CharacterImage = (props) => (
+    <div className="character">
+        <img alt="character" src={"src/images/scale/" + props.image} />
+    </div> 
+); 
 
-class CharacterButtons extends React.Component{
-    render() {
-        let buttons = this.props.buttons.map((btn, i) => {
-            return (
-                <button type="button" key={i} className={btn.color} id={'option' + (i + 1)} onClick={this.props.checkAnswer}>
-                    {btn.name}
-                </button>
-            );
-        });
+const CharacterButtons = (props) => {
+    let buttons = props.buttons.map((btn, i) => {
         return (
-            <div className="buttons">
-                {buttons}
-            </div>
-        )
-    }
-};
+            <button type="button" key={i} className={btn.color} id={'option' + (i + 1)} onClick={props.checkAnswer}>
+                {btn.name}
+            </button>
+        );
+    });
+    return (
+        <div className="buttons">{buttons}</div>
+    )
+}
 
 class TouhouTest extends React.Component{
     constructor(props) {
@@ -153,59 +134,50 @@ class TouhouTest extends React.Component{
             }
         }
     }
-    prevButtonData() {
+    navButtonsData(button) {
         let color = '';
         let func = this.changeStep;
         
-        if (this.state.currentStep.step === 1)  {
-            color = 'disabled';
-            func = () => null;
-        } else {
-            let step = this.steps[this.state.currentStep.step - 2];
-            color = (step.givenAnswer === step.rightAnswer) ? 'green' : 'red';
-        }
-        return {color, func}
-    }
-    nextButtonData() {
-        let color = '';
-        let func = this.changeStep;
-        
-        if (this.state.currentStep.step !== this.steps.length && this.state.currentStep.step < this.maxSteps) {
-            let step = this.steps[this.state.currentStep.step];
-
-            if (step.givenAnswer) {
-                color = (step.givenAnswer === step.rightAnswer) ? 'green' : 'red';
-            } else {
-                color = 'blue';
+        switch (button) {
+            case 'prev': {
+                if (this.state.currentStep.step === 1)  {
+                    color = 'disabled';
+                    func = () => null;
+                } else {
+                    let step = this.steps[this.state.currentStep.step - 2];
+                    color = (step.givenAnswer === step.rightAnswer) ? 'green' : 'red';
+                }
+                break;
             }
-        } else {
-            color = 'disabled';
-            func = () => null;
+            case 'next': {
+                if (this.state.currentStep.step !== this.steps.length && this.state.currentStep.step < this.maxSteps) {
+                    let step = this.steps[this.state.currentStep.step];
+
+                    if (step.givenAnswer) {
+                        color = (step.givenAnswer === step.rightAnswer) ? 'green' : 'red';
+                    } else {
+                        color = 'blue';
+                    }
+                } else {
+                    color = 'disabled';
+                    func = () => null;
+                } 
+                break;
+            }
         }
         
         return {color, func}
     }
     render () {
-        let prevButtonData = this.prevButtonData();
-        let nextButtonData = this.nextButtonData();
+        let prevButtonData = this.navButtonsData('prev');
+        let nextButtonData = this.navButtonsData('next');
         
         return (
             <div className="content">
-                <PrevButton 
-                    changeStep={prevButtonData.func} 
-                    color={prevButtonData.color}
-                />
-                <CharacterImage 
-                    image={this.state.currentStep.image} 
-                />
-                <CharacterButtons 
-                    checkAnswer={this.checkAnswer} 
-                    buttons={this.state.currentStep.buttons} 
-                />
-                <NextButton 
-                    changeStep={nextButtonData.func} 
-                    color={nextButtonData.color}
-                />
+                <PrevButton changeStep={prevButtonData.func} color={prevButtonData.color} />
+                <CharacterImage image={this.state.currentStep.image} />
+                <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
+                <NextButton changeStep={nextButtonData.func} color={nextButtonData.color} />
             </div>
         );
     }
