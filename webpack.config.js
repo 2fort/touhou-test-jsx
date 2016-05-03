@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     
     entry: {
-        app: ['./src/js/app.jsx']
+        app: ['./src/js/app.js']
     },
     
     output: {

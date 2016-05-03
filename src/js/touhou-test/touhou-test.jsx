@@ -1,47 +1,9 @@
-require('../sass/style.scss');
-
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import { Characters } from './json/characters.js';
-import OneStep from './classes/OneStep.js';
+import OneStep from './classes/one-step.js';
+import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons } from './elements/elements.js';
 
-const PrevButton = (props) => (
-    <div className="navigation">
-        <button type="button" id="prev" className={props.color} onClick={() => props.changeStep('prev')}>
-            <span>&nbsp;&lt;&nbsp;</span>
-        </button>
-    </div>
-);
-
-const NextButton = (props) => (
-    <div className="navigation">
-        <button type="button" id="next" className={props.color} onClick={() => props.changeStep('next')}>
-            <span>&nbsp;&gt;&nbsp;</span>
-        </button>
-    </div>
-);
-
-const CharacterImage = (props) => (
-    <div className="character">
-        <img alt="character" src={"src/images/scale/" + props.image} />
-    </div> 
-); 
-
-const CharacterButtons = (props) => {
-    let buttons = props.buttons.map((btn, i) => {
-        return (
-            <button type="button" key={i} className={btn.color} id={'option' + (i + 1)} onClick={props.checkAnswer}>
-                {btn.name}
-            </button>
-        );
-    });
-    return (
-        <div className="buttons">{buttons}</div>
-    )
-}
-
-class TouhouTest extends React.Component{
+export default class TouhouTest extends React.Component{
     constructor(props) {
         super(props);
         this.characters = props.characters;
@@ -71,7 +33,7 @@ class TouhouTest extends React.Component{
 
         let buttonsArray = this.charactersWoSolved.slice(0);
 
-        oneStep.buttons[0] = { name: rndCharacter.name, color: OneStep.buttonColor('blue') };
+        oneStep.buttons[0] = { name: rndCharacter.name, color: 'blue' };
         oneStep.rightAnswer = rndCharacter.name;
         oneStep.image = rndCharacter.imgurl;
 
@@ -80,7 +42,7 @@ class TouhouTest extends React.Component{
 
         for (let i = 1; i <= 4; i++) {
             rndCharacterPosition = this.randomNumber(buttonsArray.length);
-            oneStep.buttons[i] = { name: buttonsArray[rndCharacterPosition], color: OneStep.buttonColor('blue') };
+            oneStep.buttons[i] = { name: buttonsArray[rndCharacterPosition], color: 'blue' };
             buttonsArray.splice(rndCharacterPosition, 1);
         }
 
@@ -96,7 +58,7 @@ class TouhouTest extends React.Component{
             return;
         }
 
-        if (this.state.currentStep.step <= 20) {
+        if (this.state.currentStep.step <= this.maxSteps) {
             this.state.currentStep.passed = true;
             this.state.currentStep.givenAnswer = answerChar;
 
@@ -108,7 +70,7 @@ class TouhouTest extends React.Component{
             this.setState(this.state);
         }
         
-        if (this.state.currentStep.step < 20) { 
+        if (this.state.currentStep.step < this.maxSteps) { 
             let length = this.steps.push(new OneStep(this.state.currentStep.step + 1));
             this.fillStep(this.steps[length - 1]);
         
@@ -168,22 +130,44 @@ class TouhouTest extends React.Component{
         
         return {color, func}
     }
+    topButtonsData() {
+        let topButtons = this.steps.map((step, i) => {
+            if (step.rightAnswer === step.givenAnswer) {
+                return 'green'
+            } else if (step.rightAnswer !== step.givenAnswer && step.givenAnswer !== '') {
+                return 'red'
+            } else if (step.givenAnswer == '') {
+                return 'blue'
+            }
+        })
+        
+        let temp = this.maxSteps - topButtons.length;
+        
+        if (topButtons.length <= this.maxSteps - 1) {
+            for (let i = 0; i < temp; i++) {
+                topButtons.push('gray');
+            }
+        }
+        
+        topButtons[this.state.currentStep.step - 1] += ' active'; 
+        
+        return topButtons;
+    }
     render () {
         let prevButtonData = this.navButtonsData('prev');
         let nextButtonData = this.navButtonsData('next');
+        let topButtonsData = this.topButtonsData();
         
         return (
-            <div className="content">
-                <PrevButton changeStep={prevButtonData.func} color={prevButtonData.color} />
-                <CharacterImage image={this.state.currentStep.image} />
-                <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
-                <NextButton changeStep={nextButtonData.func} color={nextButtonData.color} />
+            <div>
+                <TopButtons data={topButtonsData} />
+                <div className="test">
+                    <PrevButton changeStep={prevButtonData.func} color={prevButtonData.color} />
+                    <CharacterImage image={this.state.currentStep.image} />
+                    <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
+                    <NextButton changeStep={nextButtonData.func} color={nextButtonData.color} />
+                </div>
             </div>
         );
     }
 };
-
-ReactDOM.render(
-    <TouhouTest characters={Characters} maxSteps={20} />,
-    document.getElementById('touhou')
-);

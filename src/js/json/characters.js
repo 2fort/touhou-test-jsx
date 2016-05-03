@@ -1,4 +1,4 @@
-export const Characters = [ {
+export const characters = [ {
         name: 'Reimu Hakurei',
         imgurl: '80b1a04d92135d099bbadc9a39aec8ff.jpg',
         artAuthor: 'のっさん',
