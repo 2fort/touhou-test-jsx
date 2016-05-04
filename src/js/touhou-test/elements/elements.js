@@ -48,4 +48,39 @@ const TopButtons = (props) => {
     )
 };
 
-export { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons }
+class Slider extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: props.step};
+        
+        this.handleInput = this.handleInput.bind(this);
+    }
+    handleInput(e) {
+        //e.preventDefault();
+        this.setState({value: e.target.value});
+        console.log("event step: " + e.target.value);
+        
+        this.props.changeStep(e.target.value - 1);
+    }
+    componentWillReceiveProps(nextProps) {
+        this.setState({value: nextProps.step});
+        console.log("nextProps step: " + nextProps.step);
+    }
+    render() {
+        console.log("props step: " + this.props.step);
+        console.log("state step: " + this.state.value);
+        return (
+            <div className="myslider" id="slider">
+                <div className="inside">
+                    <input 
+                        onInput={this.handleInput} 
+                        type="range" min="1" max={this.props.maxStep} step="1" id="myslider" 
+                        value={this.state.value} className={'width-' + this.props.maxStep} 
+                    />
+                </div>
+            </div>
+        )
+    }
+}
+
+export { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import OneStep from './classes/one-step.js';
-import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons } from './elements/elements.js';
+import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider } from './elements/elements.js';
 
 export default class TouhouTest extends React.Component{
     constructor(props) {
@@ -94,6 +94,10 @@ export default class TouhouTest extends React.Component{
                 this.setState({currentStep: this.steps[this.state.currentStep.step]});
                 break;
             }
+            default: {
+                this.setState({currentStep: this.steps[where]});
+                break;
+            }
         }
     }
     navButtonsData(button) {
@@ -160,6 +164,7 @@ export default class TouhouTest extends React.Component{
         
         return (
             <div>
+                <Slider changeStep={this.changeStep} maxStep={this.steps.length} step={this.state.currentStep.step} />
                 <TopButtons data={topButtonsData} />
                 <div className="test">
                     <PrevButton changeStep={prevButtonData.func} color={prevButtonData.color} />
