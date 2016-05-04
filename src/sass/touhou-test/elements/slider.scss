@@ -1,20 +1,13 @@
-$line-c: #fff;
-$line-w: .125em;
-
-$track-u: 1em;
-$track-w: 16*$track-u;
-$track-h: .375em;
-$track-s: 100%;
-$track-l: 45%;
-
-$ruler-fs: .875;
-$ruler-c: #2c2c2b;
-
-$thumb-bg: #a7a6a2;
-
-@mixin track() {
-  width: $track-w; 
-  height: $track-h;
+@mixin range-width($step) {
+    width: 100 / $maxSteps * $step + %;
+    
+    &::-webkit-slider-thumb {
+        width: (100/$step) + %;
+    }
+    
+    &::-moz-range-thumb {
+        width: (100/$step) + %;
+    }
 }
 
 .myslider {
@@ -43,9 +36,9 @@ $thumb-bg: #a7a6a2;
             background-color: rgba(0,0,0,0);
             border: none;
         }
-        
+
         cursor: pointer;
-            
+
         &::-webkit-slider-runnable-track {
             z-index: 101;
         }
@@ -74,245 +67,45 @@ $thumb-bg: #a7a6a2;
         &:focus {
             outline: none;
         }
+
+        &.width-1 { @include range-width(1); }
         
-        &.width-1 {
-            width: 5%;
-            
-            &::-webkit-slider-thumb {
-                width: 100%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 100%;
-            }
-        }
+        &.width-2 { @include range-width(2); }
         
-        &.width-2 {
-            width: 10%;
-            
-            &::-webkit-slider-thumb {
-                width: 50%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 50%;
-            }
-        }
+        &.width-3 { @include range-width(3); }
         
-        &.width-3 {
-            width: 15%;
-            
-            &::-webkit-slider-thumb {
-                width: 33.33%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 33.33%;
-            }
-        }
+        &.width-4 { @include range-width(4); }
         
-        &.width-4 {
-            width: 20%;
-            
-            &::-webkit-slider-thumb {
-                width: 25%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 25%;
-            }
-        }
+        &.width-5 { @include range-width(5); }
         
-        &.width-5 {
-            width: 25%;
-            
-            &::-webkit-slider-thumb {
-                width: 20%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 20%;
-            }
-        }
+        &.width-6 { @include range-width(6); }
         
-        &.width-6 {
-            width: 30%;
-            
-            &::-webkit-slider-thumb {
-                width: 16.67%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 16.67%;
-            }
-        }
+        &.width-7 { @include range-width(7); }
         
-        &.width-7 {
-            width: 35%;
-            
-            &::-webkit-slider-thumb {
-                width: 14.285%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 14.285%;
-            }
-        }
+        &.width-8 { @include range-width(8); }
         
-        &.width-8 {
-            width: 40%;
-            
-            &::-webkit-slider-thumb {
-                width: 12.5%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 12.5%;
-            }
-        }
+        &.width-9 { @include range-width(9); }
         
-        &.width-9 {
-            width: 45%;
-            
-            &::-webkit-slider-thumb {
-                width: 11.11%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 11.11%;
-            }
-        }
+        &.width-10 { @include range-width(10); }
         
-        &.width-10 {
-            width: 50%;
-            
-            &::-webkit-slider-thumb {
-                width: 10%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 10%;
-            }
-        }
+        &.width-11 { @include range-width(11); }
         
-        &.width-11 {
-            width: 55%;
-            
-            &::-webkit-slider-thumb {
-                width: 9.09%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 9.09%;
-            }
-        }
+        &.width-12 { @include range-width(12); }
         
-        &.width-12 {
-            width: 60%;
-            
-            &::-webkit-slider-thumb {
-                width: 8.33%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 8.33%;
-            }
-        }
+        &.width-13 { @include range-width(13); }
         
-        &.width-13 {
-            width: 65%;
-            
-            &::-webkit-slider-thumb {
-                width: 7.7%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 7.7%;
-            }
-        }
+        &.width-14 { @include range-width(14); }
         
-        &.width-14 {
-            width: 70%;
-            
-            &::-webkit-slider-thumb {
-                width: 7.14%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 7.14%;
-            }
-        }
+        &.width-15 { @include range-width(15); }
         
-        &.width-15 {
-            width: 75%;
-            
-            &::-webkit-slider-thumb {
-                width: 6.66%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 6.66%;
-            }
-        }
+        &.width-16 { @include range-width(16); }
         
-        &.width-16 {
-            width: 80%;
-            
-            &::-webkit-slider-thumb {
-                width: 6.25%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 6.25%;
-            }
-        }
+        &.width-17 { @include range-width(17); }
         
-        &.width-17 {
-            width: 85%;
-            
-            &::-webkit-slider-thumb {
-                width: 5.88%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 5.88%;
-            }
-        }
+        &.width-18 { @include range-width(18); }
         
-        &.width-18 {
-            width: 90%;
-            
-            &::-webkit-slider-thumb {
-                width: 5.55%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 5.55%;
-            }
-        }
+        &.width-19 { @include range-width(19); }
         
-        &.width-19 {
-            width: 95%;
-            
-            &::-webkit-slider-thumb {
-                width: 5.26%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 5.26%;
-            }
-        }
-        
-        &.width-20 {
-            width: 100%;
-            
-            &::-webkit-slider-thumb {
-                width: 5%;
-            }
-            
-            &::-moz-range-thumb {
-                width: 5%;
-            }
-        }
+        &.width-20 { @include range-width(20); }
     }
 }

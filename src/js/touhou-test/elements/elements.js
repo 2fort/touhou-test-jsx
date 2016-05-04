@@ -56,7 +56,7 @@ class Slider extends React.Component {
         this.handleInput = this.handleInput.bind(this);
     }
     handleInput(e) {
-        //e.preventDefault();
+        e.preventDefault();
         this.setState({value: e.target.value});
         console.log("event step: " + e.target.value);
         
