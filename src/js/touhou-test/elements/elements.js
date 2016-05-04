@@ -16,11 +16,14 @@ const PrevButton = (props) => (
     </div>
 );
 
-const CharacterImage = (props) => (
-    <div className="character">
-        <img alt="character" src={"src/images/scale/" + props.image} />
-    </div>
-);
+const CharacterImage = (props) => {
+    let img = require('../../../images/scale/' + props.image);
+    return (
+        <div className="character">
+            <img alt="character" src={img} />
+        </div>
+    );
+}
 
 const CharacterButtons = (props) => {
     let buttons = props.buttons.map((btn, i) => {

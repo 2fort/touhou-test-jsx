@@ -4,8 +4,8 @@
   "description": "touhou-test",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server --inline --colors --progress --hot --port 8081"
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --inline --colors --progress --hot --port 8081"
   },
   "author": "Alexander Kirsanov",
   "license": "MIT",
