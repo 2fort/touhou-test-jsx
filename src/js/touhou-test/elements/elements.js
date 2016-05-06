@@ -1,5 +1,14 @@
 import React from 'react';
 
+const Navigation = (props) => (
+    <div className="menu">
+        <nav>
+            <a href="/">Touhou @ Comiket</a>
+            <button type="button" onClick={props.reset}>RESET</button>
+        </nav>
+    </div>
+);
+
 const NextButton = (props) => (
     <div className="navigation">
         <button type="button" className={props.color} id="next" onClick={() => props.changeStep('next')}>
@@ -89,4 +98,4 @@ class Slider extends React.Component {
     }
 }
 
-export { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider }
+export { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider, Navigation }

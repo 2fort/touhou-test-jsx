@@ -10,6 +10,14 @@
     }
 }
 
+@mixin thumb() {
+    height: 30px;
+    background-image: url('./touhou-test/elements/img/arrow.svg');
+    background-size: 20px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .myslider {
     max-width: $container-width;
     margin: 1.25rem auto 0 auto;
@@ -46,19 +54,11 @@
         }
         
         &::-webkit-slider-thumb {
-            height: 30px;
-            background-image: url('./touhou-test/elements/img/arrow.svg');
-            background-size: 20px 30px;
-            background-repeat: no-repeat;
-            background-position: center;
+            @include thumb();
         }
         
         &::-moz-range-thumb {
-            height: 30px;
-            background-image: url('./touhou-test/elements/img/arrow.svg');
-            background-size: 20px 30px;
-            background-repeat: no-repeat;
-            background-position: center;
+            @include thumb();
             z-index: 100;
         }
         

@@ -1,24 +1,33 @@
 import React from 'react';
 
 import OneStep from './classes/one-step.js';
-import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider } from './elements/elements.js';
+import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider, Navigation } from './elements/elements.js';
 
 export default class TouhouTest extends React.Component{
     constructor(props) {
         super(props);
-        this.characters = props.characters.map((char) => { return { name: char.name, imgurl: char.imgurl }});
+        this.data = props.characters;
         this.maxSteps = props.maxSteps;
-        this.steps = [];
-        
-        this.steps.push(new OneStep(1));
-        this.fillStep(this.steps[0]);
-        
-        this.state = { 
-            currentStep: this.steps[0]
-        };
         
         this.checkAnswer = this.checkAnswer.bind(this);
         this.changeStep = this.changeStep.bind(this);
+        this.init = this.init.bind(this);
+        this.reset = this.reset.bind(this);
+        
+        this.init();
+        this.state = { currentStep: this.steps[0] };
+    }
+    
+    init() {
+        this.characters = this.data.map((char) => { return { name: char.name, imgurl: char.imgurl }});
+        this.steps = [];
+        this.steps.push(new OneStep(1));
+        this.fillStep(this.steps[0]);
+    }
+    
+    reset() {
+        this.init();
+        this.setState({ currentStep: this.steps[0] });
     }
     
     randomNumber(scopeLength) {
@@ -158,6 +167,7 @@ export default class TouhouTest extends React.Component{
         
         return (
             <div>
+                <Navigation reset={this.reset} />
                 <Slider changeStep={this.changeStep} maxStep={this.steps.length} step={this.state.currentStep.step} />
                 <TopButtons data={topButtonsData} />
                 <div className="test">

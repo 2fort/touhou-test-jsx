@@ -15,6 +15,11 @@ body {
 
 button {
     border: none;
+    background: none;
+    
+    &:focus {
+                outline: none;
+            } 
 }
 
 .disabled {
@@ -36,7 +41,7 @@ button {
         margin: $margin-center; 
         align-content: center;
         
-        a {
+        a, button {
             text-decoration: none;
             color: #ebebeb;
             margin-left: 1rem; 
