@@ -83,18 +83,17 @@
             align-items: center;
 
             font-size: 2rem;
-            color: #fafafa;
-            
             transition: all 0.2s;
-            opacity: 0.4;
             
             padding: 0 6px;
+            background-color: white;
             
             &.disabled {
-                background-color: #e0e0e0;
+                background-color: white;
+                color: $gray;
                 
                 &:hover {
-                    opacity: 0.4;
+                    background-color: white;
                 }
             }
 
@@ -103,7 +102,7 @@
             }
             
             &:hover {
-                opacity: 0.9;
+                background-color: #f0efef;
             }
             
             @media only screen and (max-width: 740px) {

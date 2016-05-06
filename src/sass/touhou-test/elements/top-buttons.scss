@@ -1,6 +1,6 @@
 .topbuttons {
     max-width: $container-width;
-    margin: 0 auto 1.25rem auto;
+    margin: -1rem auto 1rem auto;
     
     display: flex;
     flex-direction: row;
@@ -17,6 +17,10 @@
         &.active {
             /*box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.4);*/
             opacity: 1;
+        }
+        
+        &.blue {
+            background-color: lighten($blue, 5%);
         }
     }
 }

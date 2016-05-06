@@ -6,10 +6,8 @@ import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, S
 export default class TouhouTest extends React.Component{
     constructor(props) {
         super(props);
-        this.characters = props.characters;
+        this.characters = props.characters.map((char) => { return { name: char.name, imgurl: char.imgurl }});
         this.maxSteps = props.maxSteps;
-        this.charactersWoUsed = this.characters.slice(0);
-        this.charactersWoSolved = this.characters.map(item => { return item.name; });
         this.steps = [];
         
         this.steps.push(new OneStep(1));
@@ -28,16 +26,16 @@ export default class TouhouTest extends React.Component{
     }
     
     fillStep (oneStep) {
-        let rndCharacterPosition = this.randomNumber(this.charactersWoUsed.length);
-        let rndCharacter = this.charactersWoUsed[rndCharacterPosition];
+        let rndCharacterPosition = this.randomNumber(this.characters.length);
+        let rndCharacter = this.characters[rndCharacterPosition];
 
-        let buttonsArray = this.charactersWoSolved.slice(0);
+        let buttonsArray = this.characters.map(item => item.name);
 
         oneStep.buttons[0] = { name: rndCharacter.name, color: 'blue' };
         oneStep.rightAnswer = rndCharacter.name;
         oneStep.image = rndCharacter.imgurl;
 
-        this.charactersWoUsed.splice(rndCharacterPosition, 1);
+        this.characters.splice(rndCharacterPosition, 1);
         buttonsArray.splice(buttonsArray.indexOf(oneStep.rightAnswer), 1);
 
         for (let i = 1; i <= 4; i++) {
@@ -61,10 +59,6 @@ export default class TouhouTest extends React.Component{
         if (this.state.currentStep.step <= this.maxSteps) {
             this.state.currentStep.passed = true;
             this.state.currentStep.givenAnswer = answerChar;
-
-            if (this.state.currentStep.rightAnswer === answerChar) {
-                this.charactersWoSolved.splice(this.charactersWoSolved.indexOf(answerChar), 1);
-            }
 
             this.state.currentStep.repaintButtons();
             this.setState(this.state);
@@ -111,7 +105,7 @@ export default class TouhouTest extends React.Component{
                     func = () => null;
                 } else {
                     let step = this.steps[this.state.currentStep.step - 2];
-                    color = (step.givenAnswer === step.rightAnswer) ? 'green' : 'red';
+                    color = (step.givenAnswer === step.rightAnswer) ? 'txt-green' : 'txt-red';
                 }
                 break;
             }
@@ -120,9 +114,9 @@ export default class TouhouTest extends React.Component{
                     let step = this.steps[this.state.currentStep.step];
 
                     if (step.givenAnswer) {
-                        color = (step.givenAnswer === step.rightAnswer) ? 'green' : 'red';
+                        color = (step.givenAnswer === step.rightAnswer) ? 'txt-green' : 'txt-red';
                     } else {
-                        color = 'blue';
+                        color = 'txt-blue';
                     }
                 } else {
                     color = 'disabled';
@@ -145,7 +139,7 @@ export default class TouhouTest extends React.Component{
             }
         })
         
-        let temp = this.maxSteps - topButtons.length;
+        const temp = this.maxSteps - topButtons.length;
         
         if (topButtons.length <= this.maxSteps - 1) {
             for (let i = 0; i < temp; i++) {

@@ -61,14 +61,3 @@ button {
         }
     }
 }
-
-.steps-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    
-    button {
-        flex: 1 1 5%;
-        font-size: 0.85rem;
-    }
-}

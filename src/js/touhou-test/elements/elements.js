@@ -16,13 +16,21 @@ const PrevButton = (props) => (
     </div>
 );
 
-const CharacterImage = (props) => {
-    let img = require('../../../images/scale/' + props.image);
-    return (
-        <div className="character">
-            <img alt="character" src={img} />
-        </div>
-    );
+class CharacterImage extends React.Component {
+    shouldComponentUpdate(nextProps) {
+        if (nextProps.image !== this.props.image) {
+            return true;
+        }
+        return false;
+    }
+    render() {
+        let img = require('../../../images/scale/' + this.props.image);
+        return(
+            <div className="character">
+                <img key={img} alt="character" src={img} />
+            </div>
+        )
+    }
 }
 
 const CharacterButtons = (props) => {
@@ -61,23 +69,18 @@ class Slider extends React.Component {
     handleInput(e) {
         e.preventDefault();
         this.setState({value: e.target.value});
-        console.log("event step: " + e.target.value);
-        
         this.props.changeStep(e.target.value - 1);
     }
     componentWillReceiveProps(nextProps) {
         this.setState({value: nextProps.step});
-        console.log("nextProps step: " + nextProps.step);
     }
     render() {
-        console.log("props step: " + this.props.step);
-        console.log("state step: " + this.state.value);
         return (
-            <div className="myslider" id="slider">
-                <div className="inside">
+            <div className="myslider">
+                <div className="inside"> 
                     <input 
                         onInput={this.handleInput} 
-                        type="range" min="1" max={this.props.maxStep} step="1" id="myslider" 
+                        type="range" min="1" max={this.props.maxStep} step="1" 
                         value={this.state.value} className={'width-' + this.props.maxStep} 
                     />
                 </div>
