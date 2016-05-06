@@ -1,7 +1,7 @@
 import React from 'react';
 
 import OneStep from './classes/one-step.js';
-import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider, Navigation } from './elements/elements.js';
+import { NextButton, PrevButton, CharacterImage, CharacterButtons, TopButtons, Slider, Navigation, MyModal } from './elements/elements.js';
 
 export default class TouhouTest extends React.Component{
     constructor(props) {
@@ -15,7 +15,7 @@ export default class TouhouTest extends React.Component{
         this.reset = this.reset.bind(this);
         
         this.init();
-        this.state = { currentStep: this.steps[0] };
+        this.state = { currentStep: this.steps[0], modalIsOpen: false };
     }
     
     init() {
@@ -27,7 +27,7 @@ export default class TouhouTest extends React.Component{
     
     reset() {
         this.init();
-        this.setState({ currentStep: this.steps[0] });
+        this.setState({ currentStep: this.steps[0], modalIsOpen: false });
     }
     
     randomNumber(scopeLength) {
@@ -81,10 +81,7 @@ export default class TouhouTest extends React.Component{
                 this.setState({currentStep: this.steps[length - 1]})
             }, 850);
         } else {
-            let correctAnswers = this.steps.filter(step => step.rightAnswer === step.givenAnswer).length;
-            let incorrectAnswers = this.steps.filter(step => step.rightAnswer !== step.givenAnswer).length;
-            console.log(correctAnswers);
-            console.log(incorrectAnswers);
+            this.setState({modalIsOpen: true});
         }
     }
     changeStep(where) {
@@ -170,12 +167,19 @@ export default class TouhouTest extends React.Component{
                 <Navigation reset={this.reset} />
                 <Slider changeStep={this.changeStep} maxStep={this.steps.length} step={this.state.currentStep.step} />
                 <TopButtons data={topButtonsData} />
+                
                 <div className="test">
                     <PrevButton changeStep={prevButtonData.func} color={prevButtonData.color} />
                     <CharacterImage image={this.state.currentStep.image} />
                     <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
                     <NextButton changeStep={nextButtonData.func} color={nextButtonData.color} />
                 </div>
+                
+                <MyModal 
+                    open={this.state.modalIsOpen} 
+                    close={() => {return this.setState({modalIsOpen: false})}} 
+                    reset={this.reset} steps={this.steps}
+                />
             </div>
         );
     }

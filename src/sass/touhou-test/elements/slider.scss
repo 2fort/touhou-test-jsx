@@ -8,6 +8,10 @@
     &::-moz-range-thumb {
         width: (100/$step) + %;
     }
+    
+    &::-ms-thumb {
+        width: (100/$step) + vw;
+    }
 }
 
 @mixin thumb() {
@@ -41,16 +45,20 @@
         &::-webkit-slider-runnable-track,
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
-            background-color: rgba(0,0,0,0);
-            z-index: 101;
+            background: transparent;
         }
         
         &::-moz-range-track, 
         &::-moz-range-thumb {
             -moz-appearance: none;
-            background-color: rgba(0,0,0,0);
+            background: transparent;
             border: none;
-            z-index: 101;
+        }
+        
+        &::-ms-track {
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
         }
         
         &::-webkit-slider-thumb {
@@ -59,11 +67,28 @@
         
         &::-moz-range-thumb {
             @include thumb();
-            z-index: 100;
+        }
+        
+        &::-ms-thumb {
+            background: transparent;
+            border: none;
+            @include thumb();
+        }
+        
+        &::-ms-fill-lower {
+            background-color: transparent;
+        }
+        
+        &::-ms-fill-upper {
+            background-color: transparent;
         }
         
         &:focus {
             outline: none;
+        }
+        
+        &::-moz-focus-outer {
+            border: 0;
         }
 
         &.width-1 { @include range-width(1); }

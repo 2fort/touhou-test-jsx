@@ -1,3 +1,4 @@
+@import "elements/modal.scss";
 @import "elements/slider.scss";
 @import "elements/top-buttons.scss";
 
@@ -23,6 +24,18 @@
             max-height: 768px;
             max-width: 95%;
             margin-bottom: -4px;
+            
+            @media only screen and (max-height: 768px) {
+                & {
+                    max-height: 80vmin;
+                }
+            }
+            
+            @media only screen and (max-height: 415px) {
+                & {
+                    max-height: 75vmin;
+                }
+            }
         }
     }
     
