@@ -1,19 +1,3 @@
-@mixin range-width($step) {
-    width: 100 / $maxSteps * $step + %;
-    
-    &::-webkit-slider-thumb {
-        width: (100/$step) + %;
-    }
-    
-    &::-moz-range-thumb {
-        width: (100/$step) + %;
-    }
-    
-    &::-ms-thumb {
-        width: (100/$step) + vw;
-    }
-}
-
 @mixin thumb() {
     height: 30px;
     background-image: url('./touhou-test/elements/img/arrow.svg');
@@ -90,45 +74,24 @@
         &::-moz-focus-outer {
             border: 0;
         }
+        
+        @for $step from 1 through $maxSteps {
 
-        &.width-1 { @include range-width(1); }
+            &.width-#{$step} {
+                width: 100 / $maxSteps * $step + %;
         
-        &.width-2 { @include range-width(2); }
-        
-        &.width-3 { @include range-width(3); }
-        
-        &.width-4 { @include range-width(4); }
-        
-        &.width-5 { @include range-width(5); }
-        
-        &.width-6 { @include range-width(6); }
-        
-        &.width-7 { @include range-width(7); }
-        
-        &.width-8 { @include range-width(8); }
-        
-        &.width-9 { @include range-width(9); }
-        
-        &.width-10 { @include range-width(10); }
-        
-        &.width-11 { @include range-width(11); }
-        
-        &.width-12 { @include range-width(12); }
-        
-        &.width-13 { @include range-width(13); }
-        
-        &.width-14 { @include range-width(14); }
-        
-        &.width-15 { @include range-width(15); }
-        
-        &.width-16 { @include range-width(16); }
-        
-        &.width-17 { @include range-width(17); }
-        
-        &.width-18 { @include range-width(18); }
-        
-        &.width-19 { @include range-width(19); }
-        
-        &.width-20 { @include range-width(20); }
+                &::-webkit-slider-thumb {
+                    width: (100/$step) + %;
+                }
+                
+                &::-moz-range-thumb {
+                    width: (100/$step) + %;
+                }
+                
+                &::-ms-thumb {
+                    width: (100/$step) + vw;
+                }
+            }
+        }
     }
 }

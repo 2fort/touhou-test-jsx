@@ -1,5 +1,5 @@
 export default class OneStep {
-    
+
     constructor(step) {
         this.step = step;
         this.image = '';
@@ -8,19 +8,19 @@ export default class OneStep {
         this.rightAnswer = '';
         this.givenAnswer = '';
     }
-    
-    shuffle () {
-        let array = this.buttons;
+
+    shuffle() {
+        const array = this.buttons;
 
         for (let i = array.length - 1; i > 0; i -= 1) {
-            let j = Math.floor(Math.random() * (i + 1));
-            let temp = array[i];
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = array[i];
             array[i] = array[j];
             array[j] = temp;
         }
     }
-    
-    repaintButtons () {
+
+    repaintButtons() {
         this.buttons.forEach(button => {
             if (button.name === this.rightAnswer) {
                 button.color = 'green';
