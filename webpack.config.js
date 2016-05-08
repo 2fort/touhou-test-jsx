@@ -19,7 +19,8 @@ var webpackPlugins = [
 ];
 
 var productionPlugins = [
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.DedupePlugin()
 ];
 
 if (NODE_ENV == 'production') {
@@ -66,7 +67,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg)$/,
                 exclude: /node_modules/, 
-                loader: 'url?limit=100000&name=img/[hash].[ext]'
+                loader: 'url?limit=40000&name=img/[hash].[ext]'
             },
         ]
     },

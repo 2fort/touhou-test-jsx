@@ -84,7 +84,9 @@ export default class TouhouTest extends React.Component {
                 this.setState({ currentStep: this.steps[length - 1] });
             }, 850);
         } else {
-            this.setState({ modalIsOpen: true });
+            window.setTimeout(() => {
+                this.setState({ modalIsOpen: true });
+            }, 850);
         }
     }
 

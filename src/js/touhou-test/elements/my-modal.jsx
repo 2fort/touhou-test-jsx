@@ -29,7 +29,7 @@ export default class MyModal extends React.Component {
         let incorrectAnswers = this.props.steps.filter(step => step.rightAnswer !== step.givenAnswer).length;
 
         return (
-            <Modal isOpen={this.props.open} style={customStyles} >
+            <Modal isOpen={this.props.open} style={customStyles} onRequestClose={this.props.close} >
                 <div className="my-modal">
                     <h2>Результаты:</h2>
                     <span className="correct">правильных ответов: {correctAnswers}</span> <br />
