@@ -4,7 +4,7 @@ import React from 'react';
 const Navigation = (props) => (
     <div className="menu">
         <nav>
-            <a href="/">Touhou @ Comiket</a>
+            <a href={(process.env.NODE_ENV == 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
             <button type="button" className="reload" onClick={props.reset}>↻</button>
         </nav>
     </div>
