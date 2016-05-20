@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Navigation = (props) => (
+const Navigation = ({ reset }) => (
     <div className="menu">
         <nav>
             <a href={(process.env.NODE_ENV === 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
-            <button type="button" className="reload" onClick={props.reset}>↻</button>
+            <button type="button" className="reload" onClick={reset}>↻</button>
         </nav>
     </div>
 );
@@ -13,10 +13,10 @@ Navigation.propTypes = {
     reset: React.PropTypes.func.isRequired,
 };
 
-const NextButton = (props) => (
+const NextButton = ({ color, changeStep, children }) => (
     <div className="navigation">
-        <button type="button" className={props.color} id="next" onClick={() => props.changeStep('next')}>
-           {props.children}
+        <button type="button" className={color} id="next" onClick={() => changeStep('next')}>
+           {children}
         </button>
     </div>
 );
@@ -27,10 +27,10 @@ NextButton.propTypes = {
     children: React.PropTypes.node,
 };
 
-const PrevButton = (props) => (
+const PrevButton = ({ color, changeStep, children }) => (
     <div className="navigation">
-        <button type="button" className={props.color} id="prev" onClick={() => props.changeStep('prev')}>
-            {props.children}
+        <button type="button" className={color} id="prev" onClick={() => changeStep('prev')}>
+            {children}
         </button>
     </div>
 );
@@ -41,13 +41,13 @@ PrevButton.propTypes = {
     children: React.PropTypes.node,
 };
 
-const CharacterButtons = (props) => {
-    let buttons = props.buttons.map((btn, i) =>
-        <button type="button" key={i} className={btn.color} id={`option${i + 1}`} onClick={props.checkAnswer}>
+const CharacterButtons = ({ buttons, checkAnswer }) => {
+    let charButtons = buttons.map((btn, i) =>
+        <button type="button" key={i} className={btn.color} id={`option${i + 1}`} onClick={checkAnswer}>
             {btn.name}
         </button>
     );
-    return (<div className="buttons">{buttons}</div>);
+    return (<div className="buttons">{charButtons}</div>);
 };
 
 CharacterButtons.propTypes = {
@@ -58,8 +58,8 @@ CharacterButtons.propTypes = {
     checkAnswer: React.PropTypes.func.isRequired,
 };
 
-const TopButtons = (props) => {
-    let topButtons = props.data.map((topbtn, i) =>
+const TopButtons = ({ data }) => {
+    let topButtons = data.map((topbtn, i) =>
         <div key={i} className={topbtn} id={`step${i + 1}`}>
             &nbsp;
         </div>
