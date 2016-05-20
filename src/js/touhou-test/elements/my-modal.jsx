@@ -10,7 +10,9 @@ export default class MyModal extends React.Component {
         return false;
     }
     render() {
-        if (this.props.open === false) {
+        let {open, steps, reset, close} = this.props;
+
+        if (open === false) {
             return false;
         }
 
@@ -25,17 +27,17 @@ export default class MyModal extends React.Component {
             },
         };
 
-        let correctAnswers = this.props.steps.filter(step => step.rightAnswer === step.givenAnswer).length;
-        let incorrectAnswers = this.props.steps.filter(step => step.rightAnswer !== step.givenAnswer).length;
+        let correctAnswers = steps.filter(step => step.rightAnswer === step.givenAnswer).length;
+        let incorrectAnswers = steps.filter(step => step.rightAnswer !== step.givenAnswer).length;
 
         return (
-            <Modal isOpen={this.props.open} style={customStyles} onRequestClose={this.props.close} >
+            <Modal isOpen={open} style={customStyles} onRequestClose={close} >
                 <div className="my-modal">
                     <h2>Результаты:</h2>
                     <span className="correct">правильных ответов: {correctAnswers}</span> <br />
                     <span className="incorrect">неправильных ответов: {incorrectAnswers}</span> <br />
-                    <button className="green btn-left" onClick={this.props.reset}>Еще раз!</button>
-                    <button className="blue btn-right" onClick={this.props.close}>Закрыть</button>
+                    <button className="green btn-left" onClick={reset}>Еще раз!</button>
+                    <button className="blue btn-right" onClick={close}>Закрыть</button>
                 </div>
             </Modal>
         );

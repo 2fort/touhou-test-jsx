@@ -23,8 +23,14 @@ var productionPlugins = [
     new webpack.optimize.DedupePlugin()
 ];
 
+var developmentPlugins = [
+    new webpack.HotModuleReplacementPlugin()
+];
+
 if (NODE_ENV == 'production') {
     webpackPlugins = webpackPlugins.concat(productionPlugins);
+} else if(NODE_ENV == 'development') {
+    webpackPlugins = webpackPlugins.concat(developmentPlugins);
 }
 
 module.exports = {
@@ -76,5 +82,5 @@ module.exports = {
     
     plugins: webpackPlugins,
     
-    devtool: NODE_ENV == 'development' ? 'source-map' : null
+    devtool: NODE_ENV == 'development' ? 'cheap-module-eval-source-map' : null
 };

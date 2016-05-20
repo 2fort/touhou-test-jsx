@@ -9,8 +9,7 @@ import { NextButton, PrevButton, CharacterButtons, TopButtons, Navigation } from
 export default class TouhouTest extends React.Component {
     constructor(props) {
         super(props);
-        this.data = props.characters;
-        this.maxSteps = props.maxSteps;
+        Object.assign(this, props);
 
         this.checkAnswer = this.checkAnswer.bind(this);
         this.changeStep = this.changeStep.bind(this);
@@ -109,13 +108,13 @@ export default class TouhouTest extends React.Component {
 
     navButtonsData(button) {
         let color = '';
-        let func = this.changeStep;
+        let changeStep = this.changeStep;
 
         switch (button) {
             case 'prev': {
                 if (this.state.currentStep.step === 1) {
                     color = 'disabled';
-                    func = () => null;
+                    changeStep = () => null;
                 } else {
                     const step = this.steps[this.state.currentStep.step - 2];
                     color = (step.givenAnswer === step.rightAnswer) ? 'txt-green' : 'txt-red';
@@ -133,13 +132,13 @@ export default class TouhouTest extends React.Component {
                     }
                 } else {
                     color = 'disabled';
-                    func = () => null;
+                    changeStep = () => null;
                 }
                 break;
             }
         }
 
-        return { color, func };
+        return { color, changeStep };
     }
 
     topButtonsData() {
@@ -167,21 +166,17 @@ export default class TouhouTest extends React.Component {
     }
 
     render() {
-        const prevButtonData = this.navButtonsData('prev');
-        const nextButtonData = this.navButtonsData('next');
-        const topButtonsData = this.topButtonsData();
-
         return (
             <div>
                 <Navigation reset={this.reset} />
                 <Slider changeStep={this.changeStep} maxStep={this.steps.length} step={this.state.currentStep.step} />
-                <TopButtons data={topButtonsData} />
+                <TopButtons data={this.topButtonsData()} />
 
                 <div className="test">
-                    <PrevButton changeStep={prevButtonData.func} color={prevButtonData.color} />
+                    <PrevButton {...this.navButtonsData('prev')} />
                     <CharacterImage image={this.state.currentStep.image} />
                     <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
-                    <NextButton changeStep={nextButtonData.func} color={nextButtonData.color} />
+                    <NextButton {...this.navButtonsData('next')} />
                 </div>
 
                 <MyModal
@@ -195,6 +190,6 @@ export default class TouhouTest extends React.Component {
 }
 
 TouhouTest.propTypes = {
-    characters: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     maxSteps: React.PropTypes.number,
 };

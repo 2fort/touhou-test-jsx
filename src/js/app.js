@@ -7,6 +7,6 @@ import TouhouTest from './touhou-test/touhou-test.jsx';
 import { characters } from './touhou-test/classes/characters.js';
 
 render(
-    <TouhouTest characters={characters} maxSteps={20} />,
+    <TouhouTest data={characters} maxSteps={20} />,
     document.getElementById('touhou')
 );
