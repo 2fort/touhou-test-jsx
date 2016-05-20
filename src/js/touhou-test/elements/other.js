@@ -3,7 +3,7 @@ import React from 'react';
 const Navigation = (props) => (
     <div className="menu">
         <nav>
-            <a href={(process.env.NODE_ENV == 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
+            <a href={(process.env.NODE_ENV === 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
             <button type="button" className="reload" onClick={props.reset}>↻</button>
         </nav>
     </div>
@@ -16,7 +16,7 @@ Navigation.propTypes = {
 const NextButton = (props) => (
     <div className="navigation">
         <button type="button" className={props.color} id="next" onClick={() => props.changeStep('next')}>
-           &nbsp;&gt;&nbsp;
+           {props.children}
         </button>
     </div>
 );
@@ -24,12 +24,13 @@ const NextButton = (props) => (
 NextButton.propTypes = {
     color: React.PropTypes.string.isRequired,
     changeStep: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
 };
 
 const PrevButton = (props) => (
     <div className="navigation">
         <button type="button" className={props.color} id="prev" onClick={() => props.changeStep('prev')}>
-            &nbsp;&lt;&nbsp;
+            {props.children}
         </button>
     </div>
 );
@@ -37,6 +38,7 @@ const PrevButton = (props) => (
 PrevButton.propTypes = {
     color: React.PropTypes.string.isRequired,
     changeStep: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node,
 };
 
 const CharacterButtons = (props) => {

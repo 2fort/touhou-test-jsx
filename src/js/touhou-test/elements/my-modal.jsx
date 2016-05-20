@@ -10,7 +10,7 @@ export default class MyModal extends React.Component {
         return false;
     }
     render() {
-        let {open, steps, reset, close} = this.props;
+        const { open, steps, reset, close } = this.props;
 
         if (open === false) {
             return false;

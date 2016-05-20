@@ -136,6 +136,9 @@ export default class TouhouTest extends React.Component {
                 }
                 break;
             }
+            default: {
+                break;
+            }
         }
 
         return { color, changeStep };
@@ -147,9 +150,8 @@ export default class TouhouTest extends React.Component {
                 return 'green';
             } else if (step.rightAnswer !== step.givenAnswer && step.givenAnswer !== '') {
                 return 'red';
-            } else if (step.givenAnswer === '') {
-                return 'blue';
             }
+            return 'blue';
         });
 
         const temp = this.maxSteps - topButtons.length;
@@ -173,10 +175,10 @@ export default class TouhouTest extends React.Component {
                 <TopButtons data={this.topButtonsData()} />
 
                 <div className="test">
-                    <PrevButton {...this.navButtonsData('prev')} />
+                    <PrevButton {...this.navButtonsData('prev')}> &nbsp;&lt;&nbsp; </PrevButton>
                     <CharacterImage image={this.state.currentStep.image} />
                     <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
-                    <NextButton {...this.navButtonsData('next')} />
+                    <NextButton {...this.navButtonsData('next')}> &nbsp;&gt;&nbsp; </NextButton>
                 </div>
 
                 <MyModal
