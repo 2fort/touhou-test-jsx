@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import OneStep from '../classes/one-step.js';
 
 export default class MyModal extends React.Component {
     shouldComponentUpdate(nextProps) {
@@ -46,7 +45,7 @@ export default class MyModal extends React.Component {
 
 MyModal.propTypes = {
     open: React.PropTypes.bool.isRequired,
-    steps: React.PropTypes.arrayOf(React.PropTypes.instanceOf(OneStep)).isRequired,
+    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     reset: React.PropTypes.func.isRequired,
     close: React.PropTypes.func.isRequired,
 };

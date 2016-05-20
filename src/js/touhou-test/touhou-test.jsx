@@ -1,10 +1,8 @@
 import React from 'react';
-
-import OneStep from './classes/one-step.js';
-import CharacterImage from './elements/character-image.jsx';
-import Slider from './elements/slider.jsx';
-import MyModal from './elements/my-modal.jsx';
-import { NextButton, PrevButton, CharacterButtons, TopButtons, Navigation } from './elements/other.js';
+import CharacterImage from './elements/character-image';
+import Slider from './elements/slider';
+import MyModal from './elements/my-modal';
+import { NextButton, PrevButton, CharacterButtons, TopButtons, Navigation } from './elements/other';
 
 export default class TouhouTest extends React.Component {
     constructor(props) {
@@ -23,8 +21,9 @@ export default class TouhouTest extends React.Component {
     init() {
         this.characters = this.data.map(char => ({ name: char.name, imgurl: char.imgurl }));
         this.steps = [];
-        this.steps.push(new OneStep(1));
-        this.fillStep(this.steps[0]);
+
+        const nextStep = this.fillStep(1, this.characters);
+        this.steps.push(nextStep);
     }
 
     reset() {
@@ -36,26 +35,37 @@ export default class TouhouTest extends React.Component {
         return Math.floor(Math.random() * scopeLength);
     }
 
-    fillStep(oneStep) {
-        let rndCharacterPosition = this.randomNumber(this.characters.length);
-        const rndCharacter = this.characters[rndCharacterPosition];
+    fillStep(step, characters) {
+        let rndCharacterPosition = this.randomNumber(characters.length);
+        const rndCharacter = characters[rndCharacterPosition];
+        const buttonsArray = characters.map(item => item.name);
 
-        const buttonsArray = this.characters.map(item => item.name);
+        const oneStep = {
+            step,
+            image: rndCharacter.imgurl,
+            passed: false,
+            buttons: [rndCharacter.name],
+            rightAnswer: rndCharacter.name,
+            givenAnswer: '',
+        };
 
-        oneStep.buttons[0] = { name: rndCharacter.name, color: 'blue' };
-        oneStep.rightAnswer = rndCharacter.name;
-        oneStep.image = rndCharacter.imgurl;
-
-        this.characters.splice(rndCharacterPosition, 1);
+        characters.splice(rndCharacterPosition, 1);
         buttonsArray.splice(buttonsArray.indexOf(oneStep.rightAnswer), 1);
 
         for (let i = 1; i <= 4; i++) {
             rndCharacterPosition = this.randomNumber(buttonsArray.length);
-            oneStep.buttons[i] = { name: buttonsArray[rndCharacterPosition], color: 'blue' };
+            oneStep.buttons[i] = buttonsArray[rndCharacterPosition];
             buttonsArray.splice(rndCharacterPosition, 1);
         }
 
-        oneStep.shuffle();
+        for (let i = oneStep.buttons.length - 1; i > 0; i -= 1) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = oneStep.buttons[i];
+            oneStep.buttons[i] = oneStep.buttons[j];
+            oneStep.buttons[j] = temp;
+        }
+
+        return oneStep;
     }
 
     checkAnswer(e) {
@@ -71,16 +81,15 @@ export default class TouhouTest extends React.Component {
             this.state.currentStep.passed = true;
             this.state.currentStep.givenAnswer = answerChar;
 
-            this.state.currentStep.repaintButtons();
             this.setState(this.state);
         }
 
         if (this.state.currentStep.step < this.maxSteps) {
-            const length = this.steps.push(new OneStep(this.state.currentStep.step + 1));
-            this.fillStep(this.steps[length - 1]);
+            const nextStep = this.fillStep(this.steps.length + 1, this.characters);
+            this.steps.push(nextStep);
 
             window.setTimeout(() => {
-                this.setState({ currentStep: this.steps[length - 1] });
+                this.setState({ currentStep: this.steps[this.steps.length - 1] });
             }, 850);
         } else {
             window.setTimeout(() => {
@@ -177,7 +186,7 @@ export default class TouhouTest extends React.Component {
                 <div className="test">
                     <PrevButton {...this.navButtonsData('prev')}> &nbsp;&lt;&nbsp; </PrevButton>
                     <CharacterImage image={this.state.currentStep.image} />
-                    <CharacterButtons checkAnswer={this.checkAnswer} buttons={this.state.currentStep.buttons} />
+                    <CharacterButtons checkAnswer={this.checkAnswer} currentStep={this.state.currentStep} />
                     <NextButton {...this.navButtonsData('next')}> &nbsp;&gt;&nbsp; </NextButton>
                 </div>
 

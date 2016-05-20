@@ -1,3 +1,7 @@
 /.vscode
 /src/images
 /node_modules
+/src/js/touhou-test/actions
+/src/js/touhou-test/components
+/src/js/touhou-test/containers
+/src/js/touhou-test/reducers

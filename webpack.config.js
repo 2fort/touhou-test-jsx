@@ -43,6 +43,10 @@ module.exports = {
         path: './build',
         filename: '[name].bundle.js'
     },
+
+    resolve: {
+        extensions: ["", ".jsx", ".js"],
+    },
     
     module: {
         loaders: [
@@ -68,13 +72,18 @@ module.exports = {
             {
                 test: /\.(svg|ttf|woff|woff2|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 exclude: /node_modules/,
-                loader: "url"
+                loader: 'url'
             },
             {
                 test: /\.(png|jpg|jpeg)$/,
                 exclude: /node_modules/, 
                 loader: 'url?limit=40000&name=img/[hash].[ext]'
             },
+            {
+                test: /\.json$/,
+                exclude: /node_modules/,
+                loader: 'json'
+            }
         ]
     },
     

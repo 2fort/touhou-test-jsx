@@ -41,20 +41,31 @@ PrevButton.propTypes = {
     children: React.PropTypes.node,
 };
 
-const CharacterButtons = ({ buttons, checkAnswer }) => {
-    let charButtons = buttons.map((btn, i) =>
-        <button type="button" key={i} className={btn.color} id={`option${i + 1}`} onClick={checkAnswer}>
-            {btn.name}
-        </button>
-    );
+const CharacterButtons = ({ currentStep, checkAnswer }) => {
+    let charButtons = currentStep.buttons.map((name, i) => {
+        let color = 'blue';
+
+        if (name === currentStep.rightAnswer && currentStep.givenAnswer !== '') {
+            color = 'green';
+        } else if (name === currentStep.givenAnswer && currentStep.givenAnswer !== currentStep.rightAnswer) {
+            color = 'red';
+        }
+
+        color += (currentStep.givenAnswer !== '') ? ' disabled' : '';
+        color += (name === currentStep.givenAnswer) ? ' active' : '';
+
+        return (
+            <button type="button" key={i} className={color} onClick={checkAnswer}>
+                {name}
+            </button>
+        );
+    });
+
     return (<div className="buttons">{charButtons}</div>);
 };
 
 CharacterButtons.propTypes = {
-    buttons: React.PropTypes.arrayOf(React.PropTypes.shape({
-        name: React.PropTypes.string,
-        color: React.PropTypes.string,
-    })).isRequired,
+    currentStep: React.PropTypes.object.isRequired,
     checkAnswer: React.PropTypes.func.isRequired,
 };
 
