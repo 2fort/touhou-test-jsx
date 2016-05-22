@@ -13,16 +13,20 @@ export default class Slider extends React.Component {
     handleInput(e) {
         e.preventDefault();
         this.setState({ value: e.target.value });
-        this.props.changeStep(e.target.value - 1);
+        this.props.mutateState('SET_STEP', parseInt(e.target.value, 10));
     }
     render() {
+        const { passedSteps, maxSteps } = this.props;
+
+        let max = (passedSteps !== maxSteps) ? passedSteps + 1 : maxSteps;
+
         return (
             <div className="myslider">
                 <div className="inside">
                     <input
                       onInput={this.handleInput}
-                      type="range" min="1" max={this.props.maxStep} step="1"
-                      value={this.state.value} className={`width-${this.props.maxStep}`}
+                      type="range" min="1" max={max} step="1"
+                      value={this.state.value} className={`width-${max}`}
                     />
                 </div>
             </div>
@@ -32,6 +36,7 @@ export default class Slider extends React.Component {
 
 Slider.propTypes = {
     step: React.PropTypes.number.isRequired,
-    maxStep: React.PropTypes.number.isRequired,
-    changeStep: React.PropTypes.func.isRequired,
+    passedSteps: React.PropTypes.number.isRequired,
+    maxSteps: React.PropTypes.number.isRequired,
+    mutateState: React.PropTypes.func.isRequired,
 };

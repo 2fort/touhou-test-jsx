@@ -9,7 +9,7 @@ export default class MyModal extends React.Component {
         return false;
     }
     render() {
-        const { open, steps, reset, close } = this.props;
+        const { open, steps, reset, mutateState } = this.props;
 
         if (open === false) {
             return false;
@@ -30,13 +30,13 @@ export default class MyModal extends React.Component {
         let incorrectAnswers = steps.filter(step => step.rightAnswer !== step.givenAnswer).length;
 
         return (
-            <Modal isOpen={open} style={customStyles} onRequestClose={close} >
+            <Modal isOpen={open} style={customStyles} onRequestClose={() => mutateState('CLOSE_RESULTS_WINDOW')} >
                 <div className="my-modal">
                     <h2>Результаты:</h2>
                     <span className="correct">правильных ответов: {correctAnswers}</span> <br />
                     <span className="incorrect">неправильных ответов: {incorrectAnswers}</span> <br />
                     <button className="green btn-left" onClick={reset}>Еще раз!</button>
-                    <button className="blue btn-right" onClick={close}>Закрыть</button>
+                    <button className="blue btn-right" onClick={() => mutateState('CLOSE_RESULTS_WINDOW')}>Закрыть</button>
                 </div>
             </Modal>
         );
@@ -47,5 +47,5 @@ MyModal.propTypes = {
     open: React.PropTypes.bool.isRequired,
     steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     reset: React.PropTypes.func.isRequired,
-    close: React.PropTypes.func.isRequired,
+    mutateState: React.PropTypes.func.isRequired,
 };

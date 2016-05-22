@@ -13,68 +13,82 @@ Navigation.propTypes = {
     reset: React.PropTypes.func.isRequired,
 };
 
-const NextButton = ({ color, changeStep, children }) => (
-    <div className="navigation">
-        <button type="button" className={color} id="next" onClick={() => changeStep('next')}>
-           {children}
-        </button>
-    </div>
-);
+const NextButton = ({ steps, activeStep, passedSteps, maxSteps, mutateState, children }) => {
+    let color = 'disabled';
+
+    if (activeStep !== passedSteps + 1 && activeStep < maxSteps) {
+        const step = steps[activeStep];
+
+        if (step.givenAnswer) {
+            color = (step.givenAnswer === step.rightAnswer) ? 'txt-green' : 'txt-red';
+        } else {
+            color = 'txt-blue';
+        }
+    }
+
+    return (
+        <div className="navigation">
+            <button type="button" className={color} id="next" onClick={() => mutateState('GO_NEXT_STEP')}>
+               {children}
+            </button>
+        </div>
+    );
+};
 
 NextButton.propTypes = {
-    color: React.PropTypes.string.isRequired,
-    changeStep: React.PropTypes.func.isRequired,
+    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    activeStep: React.PropTypes.number.isRequired,
+    passedSteps: React.PropTypes.number.isRequired,
+    maxSteps: React.PropTypes.number.isRequired,
+    mutateState: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
 };
 
-const PrevButton = ({ color, changeStep, children }) => (
-    <div className="navigation">
-        <button type="button" className={color} id="prev" onClick={() => changeStep('prev')}>
-            {children}
-        </button>
-    </div>
-);
+const PrevButton = ({ steps, activeStep, mutateState, children }) => {
+    let color = 'disabled';
+
+    if (activeStep !== 1) {
+        const step = steps[activeStep - 2];
+        color = (step.givenAnswer === step.rightAnswer) ? 'txt-green' : 'txt-red';
+    }
+
+    return (
+        <div className="navigation">
+            <button type="button" className={color} id="prev" onClick={() => mutateState('GO_PREV_STEP')}>
+                {children}
+            </button>
+        </div>
+    );
+};
 
 PrevButton.propTypes = {
-    color: React.PropTypes.string.isRequired,
-    changeStep: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node,
+    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    activeStep: React.PropTypes.number.isRequired,
+    mutateState: React.PropTypes.func.isRequired,
+    children: React.PropTypes.node.isRequired,
 };
 
-const CharacterButtons = ({ currentStep, checkAnswer }) => {
-    let charButtons = currentStep.buttons.map((name, i) => {
-        let color = 'blue';
+const TopButtons = ({ steps, passedSteps, activeStep }) => {
+    const topButtons = steps.map((step, i) => {
+        let color = 'gray';
 
-        if (name === currentStep.rightAnswer && currentStep.givenAnswer !== '') {
+        if (step.rightAnswer === step.givenAnswer) {
             color = 'green';
-        } else if (name === currentStep.givenAnswer && currentStep.givenAnswer !== currentStep.rightAnswer) {
+        } else if (step.rightAnswer !== step.givenAnswer && step.givenAnswer !== '') {
             color = 'red';
+        } else if (i === passedSteps) {
+            color = 'blue';
         }
 
-        color += (currentStep.givenAnswer !== '') ? ' disabled' : '';
-        color += (name === currentStep.givenAnswer) ? ' active' : '';
+        color += ((i + 1) === activeStep) ? ' active' : '';
 
         return (
-            <button type="button" key={i} className={color} onClick={checkAnswer}>
-                {name}
-            </button>
+            <div key={i} className={color} id={`step${i + 1}`}>
+                &nbsp;
+            </div>
         );
     });
 
-    return (<div className="buttons">{charButtons}</div>);
-};
-
-CharacterButtons.propTypes = {
-    currentStep: React.PropTypes.object.isRequired,
-    checkAnswer: React.PropTypes.func.isRequired,
-};
-
-const TopButtons = ({ data }) => {
-    let topButtons = data.map((topbtn, i) =>
-        <div key={i} className={topbtn} id={`step${i + 1}`}>
-            &nbsp;
-        </div>
-    );
     return (
         <div className="topbuttons" id="mytopbuttons">
             {topButtons}
@@ -83,7 +97,9 @@ const TopButtons = ({ data }) => {
 };
 
 TopButtons.propTypes = {
-    data: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    passedSteps: React.PropTypes.number.isRequired,
+    activeStep: React.PropTypes.number.isRequired,
 };
 
-export { NextButton, PrevButton, CharacterButtons, TopButtons, Navigation };
+export { NextButton, PrevButton, TopButtons, Navigation };

@@ -3,7 +3,7 @@ require('../sass/app.scss');
 import React from 'react';
 import { render } from 'react-dom';
 
-import TouhouTest from './touhou-test/touhou-test';
+import TouhouTest from './touhou-test';
 import _characters from '../api/characters.json';
 
 render(
