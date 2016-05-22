@@ -4,13 +4,12 @@ import Slider from './elements/Slider';
 import MyModal from './elements/MyModal';
 import CharacterButtons from './elements/CharacterButtons';
 import { NextButton, PrevButton, TopButtons, Navigation } from './elements/other';
+import * as testApi from './api';
 
 export default class TouhouTest extends React.Component {
     constructor(props) {
         super(props);
-        Object.assign(this, props);
-
-        this.characters = this.data.map(char => ({ name: char.name, imgurl: char.imgurl }));
+        this.maxSteps = props.maxSteps;
 
         this.init = this.init.bind(this);
         this.mutateState = this.mutateState.bind(this);
@@ -19,61 +18,22 @@ export default class TouhouTest extends React.Component {
     }
 
     init() {
-        const tempCharacters = this.characters.slice(0);
-        this.steps = [];
+        this.steps = testApi.generateNewTest(this.maxSteps);
 
-        for (let st = 1; st <= 20; st++) {
-            let rndCharacterPosition = this.randomNumber(tempCharacters.length);
-            const rndCharacter = tempCharacters[rndCharacterPosition];
-            const buttonsArray = tempCharacters.map(item => item.name);
-
-            const oneStep = {
-                step: st,
-                image: rndCharacter.imgurl,
-                passed: false,
-                buttons: [rndCharacter.name],
-                rightAnswer: rndCharacter.name,
-                givenAnswer: '',
-            };
-
-            tempCharacters.splice(rndCharacterPosition, 1);
-            buttonsArray.splice(buttonsArray.indexOf(oneStep.rightAnswer), 1);
-
-            for (let i = 1; i <= 4; i++) {
-                rndCharacterPosition = this.randomNumber(buttonsArray.length);
-                oneStep.buttons[i] = buttonsArray[rndCharacterPosition];
-                buttonsArray.splice(rndCharacterPosition, 1);
-            }
-
-            for (let i = oneStep.buttons.length - 1; i > 0; i -= 1) {
-                const j = Math.floor(Math.random() * (i + 1));
-                const temp = oneStep.buttons[i];
-                oneStep.buttons[i] = oneStep.buttons[j];
-                oneStep.buttons[j] = temp;
-            }
-
-            this.steps.push(oneStep);
-        }
+        const objState = {
+            activeStep: 1,
+            modalIsOpen: false,
+        };
 
         if (!this.context) {
-            this.state = {
-                activeStep: 1,
-                modalIsOpen: false,
-            };
+            this.state = objState;
         } else {
-            this.setState({
-                activeStep: 1,
-                modalIsOpen: false,
-            });
+            this.setState(objState);
         }
     }
 
     get passedSteps() {
         return this.steps.filter(step => step.passed === true).length;
-    }
-
-    randomNumber(scopeLength) {
-        return Math.floor(Math.random() * scopeLength);
     }
 
     mutateState(action, payload) {
