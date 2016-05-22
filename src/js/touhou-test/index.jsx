@@ -41,7 +41,7 @@ export default class TouhouTest extends React.Component {
                 break;
             }
             case 'SET_STEP': {
-                const newState = Object.assign({}, this.state, payload);
+                const newState = { ...this.state, payload }; // Object.assign({}, this.state, payload);
                 this.setState(newState);
                 break;
             }
