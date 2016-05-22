@@ -4,16 +4,8 @@ export default class CharacterButtons extends React.Component {
     handleAnswer(answerChar) {
         const { mutateState, currentStep, maxSteps } = this.props;
 
-        if (currentStep.passed === true) {
-            return;
-        }
-
-        console.log(currentStep.step);
-
-        if (currentStep.step <= maxSteps) {
-            currentStep.passed = true;
-            currentStep.givenAnswer = answerChar;
-        }
+        currentStep.passed = true;
+        currentStep.givenAnswer = answerChar;
 
         mutateState('SET_STEP', currentStep.step);
 
@@ -47,8 +39,10 @@ export default class CharacterButtons extends React.Component {
                   key={i}
                   className={color}
                   onClick={e => {
-                      e.preventDefault();
-                      this.handleAnswer(e.target.innerText);
+                      if (!currentStep.passed) {
+                          e.preventDefault();
+                          this.handleAnswer(e.target.innerText);
+                      }
                   }}
                 >
                     {name}
