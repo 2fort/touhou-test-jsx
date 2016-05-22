@@ -2,18 +2,19 @@ import React from 'react';
 
 export default class CharacterButtons extends React.Component {
     handleAnswer(answerChar) {
-        const { mutateState, currentStep, maxSteps } = this.props;
+        const { actions, currentStep, maxSteps } = this.props;
 
         currentStep.passed = true;
         currentStep.givenAnswer = answerChar;
 
-        mutateState('SET_STEP', currentStep.step);
+        actions.answerGiven(currentStep);
+        actions.setStep(currentStep.step);
 
         window.setTimeout(() => {
             if (currentStep.step === maxSteps) {
-                mutateState('OPEN_RESULTS_WINDOW');
+                actions.openResultsWindow();
             } else {
-                mutateState('GO_NEXT_STEP');
+                actions.goNextStep();
             }
         }, 850);
     }
@@ -63,6 +64,6 @@ CharacterButtons.propTypes = {
         rightAnswer: React.PropTypes.string.isRequired,
         givenAnswer: React.PropTypes.string.isRequired,
     }).isRequired,
-    mutateState: React.PropTypes.func.isRequired,
+    actions: React.PropTypes.object.isRequired,
     maxSteps: React.PropTypes.number.isRequired,
 };

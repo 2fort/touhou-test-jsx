@@ -45,3 +45,6 @@ export function generateNewTest(maxSteps) {
     return steps;
 }
 
+export function passedSteps(steps) {
+    return steps.filter(step => step.passed === true).length;
+}

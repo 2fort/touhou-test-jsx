@@ -1,0 +1,7 @@
+export const GO_PREV_STEP = 'GO_PREV_STEP';
+export const GO_NEXT_STEP = 'GO_NEXT_STEP';
+export const SET_STEP = 'SET_STEP';
+export const OPEN_RESULTS_WINDOW = 'OPEN_RESULTS_WINDOW';
+export const CLOSE_RESULTS_WINDOW = 'CLOSE_RESULTS_WINDOW';
+export const RESET_TEST = 'RESET_TEST';
+export const ANSWER_GIVEN = 'ANSWER_GIVEN';

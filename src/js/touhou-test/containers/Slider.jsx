@@ -13,7 +13,7 @@ export default class Slider extends React.Component {
     handleInput(e) {
         e.preventDefault();
         this.setState({ value: e.target.value });
-        this.props.mutateState('SET_STEP', { activeStep: parseInt(e.target.value, 10) });
+        this.props.setStep(parseInt(e.target.value, 10));
     }
     render() {
         const { passedSteps, maxSteps } = this.props;
@@ -38,5 +38,5 @@ Slider.propTypes = {
     step: React.PropTypes.number.isRequired,
     passedSteps: React.PropTypes.number.isRequired,
     maxSteps: React.PropTypes.number.isRequired,
-    mutateState: React.PropTypes.func.isRequired,
+    setStep: React.PropTypes.func.isRequired,
 };

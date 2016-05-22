@@ -1,19 +1,19 @@
 import React from 'react';
 
-const Navigation = ({ mutateState }) => (
+const Navigation = ({ resetTest }) => (
     <div className="menu">
         <nav>
             <a href={(process.env.NODE_ENV === 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
-            <button type="button" className="reload" onClick={() => mutateState('RESET_TEST')}>↻</button>
+            <button type="button" className="reload" onClick={resetTest}>↻</button>
         </nav>
     </div>
 );
 
 Navigation.propTypes = {
-    mutateState: React.PropTypes.func.isRequired,
+    resetTest: React.PropTypes.func.isRequired,
 };
 
-const NextButton = ({ steps, activeStep, passedSteps, maxSteps, mutateState, children }) => {
+const NextButton = ({ steps, activeStep, passedSteps, maxSteps, goNextStep, children }) => {
     let color = 'disabled';
 
     if (activeStep !== passedSteps + 1 && activeStep < maxSteps) {
@@ -28,7 +28,7 @@ const NextButton = ({ steps, activeStep, passedSteps, maxSteps, mutateState, chi
 
     return (
         <div className="navigation">
-            <button type="button" className={color} id="next" onClick={() => mutateState('GO_NEXT_STEP')}>
+            <button type="button" className={color} id="next" onClick={goNextStep}>
                {children}
             </button>
         </div>
@@ -40,11 +40,11 @@ NextButton.propTypes = {
     activeStep: React.PropTypes.number.isRequired,
     passedSteps: React.PropTypes.number.isRequired,
     maxSteps: React.PropTypes.number.isRequired,
-    mutateState: React.PropTypes.func.isRequired,
+    goNextStep: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
 };
 
-const PrevButton = ({ steps, activeStep, mutateState, children }) => {
+const PrevButton = ({ steps, activeStep, goPrevStep, children }) => {
     let color = 'disabled';
 
     if (activeStep !== 1) {
@@ -54,7 +54,7 @@ const PrevButton = ({ steps, activeStep, mutateState, children }) => {
 
     return (
         <div className="navigation">
-            <button type="button" className={color} id="prev" onClick={() => mutateState('GO_PREV_STEP')}>
+            <button type="button" className={color} id="prev" onClick={goPrevStep}>
                 {children}
             </button>
         </div>
@@ -64,7 +64,7 @@ const PrevButton = ({ steps, activeStep, mutateState, children }) => {
 PrevButton.propTypes = {
     steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     activeStep: React.PropTypes.number.isRequired,
-    mutateState: React.PropTypes.func.isRequired,
+    goPrevStep: React.PropTypes.func.isRequired,
     children: React.PropTypes.node.isRequired,
 };
 
