@@ -11,25 +11,14 @@ export default class TouhouTest extends React.Component {
         super(props);
         this.maxSteps = props.maxSteps;
 
-        this.init = this.init.bind(this);
         this.mutateState = this.mutateState.bind(this);
 
-        this.init();
-    }
-
-    init() {
         this.steps = testApi.generateNewTest(this.maxSteps);
 
-        const objState = {
+        this.state = {
             activeStep: 1,
             modalIsOpen: false,
         };
-
-        if (!this.context) {
-            this.state = objState;
-        } else {
-            this.setState(objState);
-        }
     }
 
     get passedSteps() {
@@ -63,6 +52,14 @@ export default class TouhouTest extends React.Component {
                 this.setState({ modalIsOpen: false });
                 break;
             }
+            case 'RESET_TEST': {
+                this.steps = testApi.generateNewTest(this.maxSteps);
+                this.setState({
+                    activeStep: 1,
+                    modalIsOpen: false,
+                });
+                break;
+            }
             default: {
                 break;
             }
@@ -72,7 +69,7 @@ export default class TouhouTest extends React.Component {
     render() {
         return (
             <div>
-                <Navigation reset={this.init} />
+                <Navigation mutateState={this.mutateState} />
                 <Slider
                   mutateState={this.mutateState}
                   passedSteps={this.passedSteps}
@@ -118,7 +115,6 @@ export default class TouhouTest extends React.Component {
                 <MyModal
                   open={this.state.modalIsOpen}
                   mutateState={this.mutateState}
-                  reset={this.init}
                   steps={this.steps}
                 />
             </div>
@@ -127,6 +123,5 @@ export default class TouhouTest extends React.Component {
 }
 
 TouhouTest.propTypes = {
-    data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     maxSteps: React.PropTypes.number.isRequired,
 };

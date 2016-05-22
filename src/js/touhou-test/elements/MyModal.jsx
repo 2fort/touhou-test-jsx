@@ -9,7 +9,7 @@ export default class MyModal extends React.Component {
         return false;
     }
     render() {
-        const { open, steps, reset, mutateState } = this.props;
+        const { open, steps, mutateState } = this.props;
 
         if (open === false) {
             return false;
@@ -35,7 +35,7 @@ export default class MyModal extends React.Component {
                     <h2>Результаты:</h2>
                     <span className="correct">правильных ответов: {correctAnswers}</span> <br />
                     <span className="incorrect">неправильных ответов: {incorrectAnswers}</span> <br />
-                    <button className="green btn-left" onClick={reset}>Еще раз!</button>
+                    <button className="green btn-left" onClick={() => mutateState('RESET_TEST')}>Еще раз!</button>
                     <button className="blue btn-right" onClick={() => mutateState('CLOSE_RESULTS_WINDOW')}>Закрыть</button>
                 </div>
             </Modal>
@@ -46,6 +46,5 @@ export default class MyModal extends React.Component {
 MyModal.propTypes = {
     open: React.PropTypes.bool.isRequired,
     steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    reset: React.PropTypes.func.isRequired,
     mutateState: React.PropTypes.func.isRequired,
 };

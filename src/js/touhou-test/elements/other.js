@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Navigation = ({ reset }) => (
+const Navigation = ({ mutateState }) => (
     <div className="menu">
         <nav>
             <a href={(process.env.NODE_ENV === 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
-            <button type="button" className="reload" onClick={reset}>↻</button>
+            <button type="button" className="reload" onClick={() => mutateState('RESET_TEST')}>↻</button>
         </nav>
     </div>
 );
 
 Navigation.propTypes = {
-    reset: React.PropTypes.func.isRequired,
+    mutateState: React.PropTypes.func.isRequired,
 };
 
 const NextButton = ({ steps, activeStep, passedSteps, maxSteps, mutateState, children }) => {
