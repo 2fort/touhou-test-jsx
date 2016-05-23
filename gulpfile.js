@@ -5,7 +5,7 @@ const imagemin = require('gulp-imagemin');
 
 gulp.task('clean-scale-folder', function (cb) {
     return del([
-        './src/images/scale/*.*'
+        './src/images/scale/*.*',
     ]);
 });
 
@@ -15,7 +15,7 @@ gulp.task('scale-jpg', ['clean-scale-folder'], function (cb) {
             height: 768,
             crop: false,
             upscale: false,
-            quality: 0.95
+            quality: 0.95,
         }))
         .pipe(gulp.dest('./src/images/scale'));
 });
@@ -25,7 +25,7 @@ gulp.task('scale-png', ['clean-scale-folder'], function (cb) {
         .pipe(imageResize({
             height: 768,
             crop: false,
-            upscale: false
+            upscale: false,
         }))
         .pipe(gulp.dest('./src/images/temp'));
 });
@@ -38,7 +38,7 @@ gulp.task('imagemin-png', ['clean-scale-folder', 'scale-png'], function (cb) {
 
 gulp.task('clean-temp-folder', ['clean-scale-folder', 'scale-png', 'imagemin-png'], function (cb) {
     return del([
-        './src/images/temp/*.*'
+        './src/images/temp/*.*',
     ]);
 });
 

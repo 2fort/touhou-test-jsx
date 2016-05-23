@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "clean": "rm -rf build/*",
-    "build": "rm -rf build/* && NODE_ENV=production webpack",
+    "build": "cd build && ls | xargs rm -rf && cd .. && NODE_ENV=production webpack",
     "start": "NODE_ENV=development webpack-dev-server --host 0.0.0.0 --inline --colors --progress --hot --port 8081",
     "lint": "eslint \"./src/js/**\"; exit 0",
     "img": "gulp images"
