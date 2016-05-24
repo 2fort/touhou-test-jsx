@@ -1,12 +1,12 @@
 {
-  "name": "touhou-react-webpack",
-  "version": "0.0.1",
+  "name": "touhou-test-jsx",
+  "version": "0.0.2",
   "description": "touhou-test",
   "main": "app.js",
   "scripts": {
     "clean": "rm -rf build/*",
     "build": "cd build && ls | xargs rm -rf && cd .. && NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack-dev-server --host 0.0.0.0 --inline --colors --progress --hot --port 8081",
+    "start": "NODE_ENV=development webpack-dev-server --host 0.0.0.0 --inline --colors --progress --port 8081",
     "lint": "eslint \"./src/js/**\"; exit 0",
     "img": "gulp images"
   },

@@ -3,13 +3,12 @@ require('../sass/app.scss');
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
-import rootReducer from './touhou-test/reducers';
+import configureStore from './touhou-test/store/configureStore';
 
-import TouhouTest from './touhou-test/components/TouhouTest';
+import TouhouTest from './touhou-test/containers/TouhouTest';
 
-let store = createStore(rootReducer);
+const store = configureStore();
 
 render(
     <Provider store={store}>

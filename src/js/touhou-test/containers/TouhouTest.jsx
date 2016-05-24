@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 import * as TestActions from '../actions';
 
-import CharacterImage from '../containers/CharacterImage';
-import Slider from '../containers/Slider';
-import MyModal from '../containers/MyModal';
-import CharacterButtons from '../containers/CharacterButtons';
-import { NextButton, PrevButton, TopButtons, Navigation } from '../containers/other';
+import CharacterImage from '../components/CharacterImage';
+import Slider from '../components/Slider';
+import MyModal from '../components/MyModal';
+import CharacterButtons from '../components/CharacterButtons';
+import { NextButton, PrevButton, TopButtons, Navigation } from '../components/other';
 
 const TouhouTest = ({ steps, maxSteps, activeStep, passedSteps, modalIsOpen, actions }) => (
     <div>
