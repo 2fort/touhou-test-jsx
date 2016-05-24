@@ -4,9 +4,8 @@
   "description": "touhou-test",
   "main": "app.js",
   "scripts": {
-    "clean": "rm -rf build/*",
-    "build": "cd build && ls | xargs rm -rf && cd .. && NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack-dev-server --host 0.0.0.0 --inline --colors --progress --port 8081",
+    "start": "webpack-dev-server --host 0.0.0.0",
+    "build": "cd build && ls | xargs rm -rf && cd .. && NODE_ENV=production webpack --config webpack.prod.config.js",
     "lint": "sass-lint 'src/sass/**/*.scss' -v -q && eslint \"./src/js/**\"; exit 0",
     "img": "gulp images"
   },
@@ -51,6 +50,7 @@
     "react-dom": "^15.1.0",
     "react-modal": "^1.3.0",
     "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
     "redux": "^3.5.2"
   }
 }

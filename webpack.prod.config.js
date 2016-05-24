@@ -1,13 +1,12 @@
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
-    entry: [
-        'webpack-dev-server/client?http://0.0.0.0:8081',
-        'webpack/hot/only-dev-server',
-        './src/js/app.js',
-    ],
+    entry: {
+        app: ['./src/js/app.js'],
+    },
 
     output: {
         path: './build',
@@ -23,17 +22,17 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css?sourceMap',
+                loader: 'style!' + 'resolve-url!' + 'css',
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css?sourceMap!' + 'sass?sourceMap',
+                loader: 'style!' + 'resolve-url!' + 'css!' + 'postcss!' + 'sass?sourceMap',
             },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot', 'babel-loader?cacheDirectory'],
+                loader: 'babel-loader',
             },
             {
                 test: /\.(svg|ttf|woff|woff2|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -53,6 +52,8 @@ module.exports = {
         ],
     },
 
+    postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
+
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Touhou-test',
@@ -61,23 +62,19 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify('development'),
+                NODE_ENV: JSON.stringify('production'),
+            },
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compressor: {
+                pure_getters: true,
+                unsafe: true,
+                screw_ie8: true,
+                warnings: false,
             },
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.AggressiveMergingPlugin(),
     ],
-
-    devtool: 'cheap-module-eval-source-map',
-
-    devServer: {
-        contentBase: './src/js',
-        historyApiFallback: true,
-        hot: true,
-        progress: true,
-        stats: {
-            colors: true,
-        },
-        port: 8081,
-    },
 };
