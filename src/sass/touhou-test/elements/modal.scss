@@ -1,35 +1,38 @@
 .my-modal {
-    
+
     span {
         &.correct {
-            margin-bottom: 0.8rem;
-            
+            margin-bottom: .8rem;
+
             &:before {
                 color: $green;
-                content: "✔ "; 
+                content: '✔ ';
             }
         }
-        
-        &.incorrect:before {
-            color: $red;
-            content: "✖ ";
+
+        &.incorrect {
+
+            &:before {
+                color: $red;
+                content: '✖ ';
+            }
         }
     }
-    
+
     button {
-        padding: 0.35rem 0.55rem;
-        color: rgba(255,255,255,0.87);
         border-radius: 3px;
+        color: rgba(255, 255, 255, .87);
         margin-top: 1rem;
-        
+        padding: .35rem .55rem;
+
         &.green {
             background-color: darken($green, 5%);
         }
-        
+
         &.btn-left {
             float: left;
         }
-    
+
         &.btn-right {
             float: right;
         }

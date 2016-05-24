@@ -1,95 +1,95 @@
-@mixin thumb() {
-    height: 30px;
+@mixin thumb {
     background-image: url('./touhou-test/elements/img/arrow.svg');
-    background-size: 20px 30px;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 30px;
+    height: 30px;
 }
 
 .myslider {
-    max-width: $container-width;
-    margin: 1.25rem auto 0 auto;
     height: 30px;
-    
+    margin: .25rem auto 0;
+    max-width: $container-width;
+
     .inside {
-        width: 100%;
-        height: 7px;
         background-color: $gray;
-        margin-bottom: 8px;
         border-radius: 3px;
+        height: 7px;
+        margin-bottom: 8px;
+        width: 100%;
     }
-    
+
     input[type=range] {
         cursor: pointer;
-        padding: 0;
         height: 30px;
-        margin-top: -0.4rem;
-        
-        &, 
+        margin-top: -.4rem;
+        padding: 0;
+
+        &,
         &::-webkit-slider-runnable-track,
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             background: transparent;
         }
-        
-        &::-moz-range-track, 
+
+        &::-moz-range-track,
         &::-moz-range-thumb {
             -moz-appearance: none;
             background: transparent;
-            border: none;
+            border: 0;
         }
-        
+
         &::-ms-track {
             background: transparent;
             border-color: transparent;
             color: transparent;
         }
-        
+
         &::-webkit-slider-thumb {
-            @include thumb();
+            @include thumb;
         }
-        
+
         &::-moz-range-thumb {
-            @include thumb();
+            @include thumb;
         }
-        
+
         &::-ms-thumb {
+            @include thumb;
             background: transparent;
-            border: none;
-            @include thumb();
+            border: 0;
         }
-        
+
         &::-ms-fill-lower {
             background-color: transparent;
         }
-        
+
         &::-ms-fill-upper {
             background-color: transparent;
         }
-        
+
         &:focus {
             outline: none;
         }
-        
+
         &::-moz-focus-outer {
             border: 0;
         }
-        
-        @for $step from 1 through $maxSteps {
+
+        @for $step from 1 through $max-steps {
 
             &.width-#{$step} {
-                width: 100 / $maxSteps * $step + %;
-        
+                width: 100 / $max-steps * $step + %;
+
                 &::-webkit-slider-thumb {
-                    width: (100/$step) + %;
+                    width: (100 / $step) + %;
                 }
-                
+
                 &::-moz-range-thumb {
-                    width: (100/$step) + %;
+                    width: (100 / $step) + %;
                 }
-                
+
                 &::-ms-thumb {
-                    width: (100/$step) + vw;
+                    width: (100 / $step) + vw;
                 }
             }
         }

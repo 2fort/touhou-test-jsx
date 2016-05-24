@@ -1,36 +1,35 @@
-@import "elements/modal.scss";
-@import "elements/slider.scss";
-@import "elements/top-buttons.scss";
+@import 'elements/modal';
+@import 'elements/slider';
+@import 'elements/top-buttons';
 
 .test {
-    max-width: $container-width;
-    margin: 0 auto;
+    background: #f9f9f9;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: $container-width;
     padding: 0;
-    
-    background: #f9f9f9;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
-    border-radius: 2px;
-    
+
     .character {
-        flex: 1 1 67%;
-        text-align: center;
-        margin: auto 0;
         background: #fefefe;
-        
+        flex: 1 1 67%;
+        margin: auto 0;
+        text-align: center;
+
         img {
+            margin-bottom: -4px;
             max-height: 768px;
             max-width: 95%;
-            margin-bottom: -4px;
-            
+
             @media only screen and (max-height: 768px) {
                 & {
                     max-height: 80vmin;
                 }
             }
-            
+
             @media only screen and (max-height: 415px) {
                 & {
                     max-height: 75vmin;
@@ -38,79 +37,76 @@
             }
         }
     }
-    
+
     .buttons {
-        flex: 1 1 22%;
-        margin: 0.85rem 0.85rem 0 0.85rem;
-        
         display: flex;
+        flex: 1 1 22%;
         flex-direction: column;
         flex-wrap: nowrap;
+        margin: .85rem .85rem 0;
 
         button {
-            padding: 0.75rem 1rem;
-            margin-bottom: 0.85rem;
-            text-align: center;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-            color: rgba(255,255,255,0.87);
             border-radius: 3px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+            color: rgba(255, 255, 255, .87);
             font-weight: bold;
-            
+            margin-bottom: .85rem;
+            padding: .75rem 1rem;
+            text-align: center;
+
             &.active {
-                box-shadow: inset 3px 7px 7px rgba(0,0,0,0.17);
+                box-shadow: inset 3px 7px 7px rgba(0, 0, 0, .17);
             }
-            
+
             @media only screen and (max-width: 740px) {
                 & {
-                    font-size: 0.9em;
-                    padding: 0.5rem 0.7rem; 
+                    font-size: .9em;
+                    padding: .5rem .7rem;
                 }
             }
-            
+
             @media only screen and (max-width: 580px) {
                 & {
-                    font-size: 0.8em;
-                    padding: 0.35rem 0.5rem; 
+                    font-size: .8em;
+                    padding: .35rem .5rem;
                 }
             }
         }
     }
 
     .navigation {
-        flex: 1 1 1%;
         display: flex;
-        transition: all 0.2s;
+        flex: 1 1 1%;
         text-align: center;
-        
+        transition: all .2s;
+
         button {
-            flex-grow: 1;
+            align-items: center;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
+            flex-grow: 1;
             font-size: 2rem;
-            transition: all 0.2s;
-            
+            justify-content: center;
             padding: 0 6px;
-            background-color: white;
-            
+            transition: all .2s;
+
             &.disabled {
-                background-color: white;
+                background-color: #fff;
                 color: $gray;
-                
+
                 &:hover {
-                    background-color: white;
+                    background-color: #fff;
                 }
             }
 
             &:hover {
                 background-color: #f0efef;
             }
-            
+
             @media only screen and (max-width: 740px) {
                 & {
-                    padding: 0 4px; 
+                    padding: 0 4px;
                 }
             }
         }
