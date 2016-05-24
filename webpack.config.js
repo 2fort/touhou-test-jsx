@@ -16,6 +16,7 @@ let webpackPlugins = [
             NODE_ENV: JSON.stringify(NODE_ENV),
         },
     }),
+    new webpack.optimize.OccurenceOrderPlugin(),
 ];
 
 const productionPlugins = [
@@ -27,8 +28,11 @@ const developmentPlugins = [
     new webpack.HotModuleReplacementPlugin(),
 ];
 
+let cssLoaderPref = 'css?sourceMap!'; // default for dev
+
 if (NODE_ENV === 'production') {
     webpackPlugins = webpackPlugins.concat(productionPlugins);
+    cssLoaderPref = 'css!';
 } else if (NODE_ENV === 'development') {
     webpackPlugins = webpackPlugins.concat(developmentPlugins);
 }
@@ -53,12 +57,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css?sourceMap',
+                loader: 'style!' + 'resolve-url!' + cssLoaderPref,
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css?sourceMap!' + 'postcss!' + 'sass?sourceMap',
+                loader: 'style!' + 'resolve-url!' + cssLoaderPref + 'postcss!' + 'sass?sourceMap',
             },
             {
                 test: /\.(js|jsx)$/,
