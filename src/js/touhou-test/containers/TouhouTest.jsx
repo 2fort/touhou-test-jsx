@@ -1,75 +1,96 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import DocumentTitle from 'react-document-title';
 
-import * as TestActions from '../actions';
+import * as TestActions from '../actions/testActions';
 
-import CharacterImage from '../components/CharacterImage';
-import Slider from '../components/Slider';
-import MyModal from '../components/MyModal';
-import CharacterButtons from '../components/CharacterButtons';
-import { NextButton, PrevButton, TopButtons, Navigation } from '../components/other';
+import CharacterImage from '../components/TouhouTest/CharacterImage';
+import Slider from '../components/TouhouTest/Slider';
+import MyModal from '../components/TouhouTest/MyModal';
+import CharacterButtons from '../components/TouhouTest/CharacterButtons';
+import { NextButton, PrevButton, TopButtons } from '../components/TouhouTest/other';
 
-const TouhouTest = ({ steps, maxSteps, activeStep, passedSteps, modalIsOpen, actions }) => (
-    <div>
-        <Navigation resetTest={actions.resetTest} />
-        <Slider
-          setStep={actions.setStep}
-          passedSteps={passedSteps}
-          maxSteps={maxSteps}
-          step={activeStep}
-        />
-        <TopButtons
-          steps={steps}
-          passedSteps={passedSteps}
-          activeStep={activeStep}
-        />
+class TouhouTest extends Component {
+    componentWillMount() {
+        this.props.actions.showResetButton();
 
-        <div className="test">
-            <PrevButton
-              steps={steps}
-              activeStep={activeStep}
-              goPrevStep={actions.goPrevStep}
-            >
-              &nbsp;&lt;&nbsp;
-            </PrevButton>
+        if (!this.props.inProgress) {
+            this.props.actions.beginTest();
+        }
+    }
+    componentWillUnmount() {
+        this.props.actions.hideResetButton();
+    }
+    render() {
+        let { steps, maxSteps, activeStep, passedSteps, modalIsOpen, actions } = this.props;
 
-            <CharacterImage
-              image={steps[activeStep - 1].image}
-            />
+        if (!this.props.inProgress) {
+            return null;
+        }
 
-            <CharacterButtons
-              currentStep={Object.assign({}, steps[activeStep - 1])}
-              actions={actions}
-              maxSteps={maxSteps}
-            />
+        return (
+            <DocumentTitle title="Test x20 | Touhou">
+                <div>
+                    <Slider
+                      setStep={actions.setStep}
+                      passedSteps={passedSteps}
+                      maxSteps={maxSteps}
+                      step={activeStep}
+                    />
+                    <TopButtons
+                      steps={steps}
+                      passedSteps={passedSteps}
+                      activeStep={activeStep}
+                    />
 
-            <NextButton
-              steps={steps}
-              activeStep={activeStep}
-              passedSteps={passedSteps}
-              maxSteps={maxSteps}
-              goNextStep={actions.goNextStep}
-            >
-                &nbsp;&gt;&nbsp;
-            </NextButton>
-        </div>
+                    <div className="test">
+                        <PrevButton
+                          steps={steps}
+                          activeStep={activeStep}
+                          goPrevStep={actions.goPrevStep}
+                        >
+                          &nbsp;&lt;&nbsp;
+                        </PrevButton>
 
-        <MyModal
-          open={modalIsOpen}
-          actions={actions}
-          steps={steps}
-        />
-    </div>
-);
+                        <CharacterImage
+                          image={steps[activeStep - 1].image}
+                        />
 
+                        <CharacterButtons
+                          currentStep={Object.assign({}, steps[activeStep - 1])}
+                          actions={actions}
+                          maxSteps={maxSteps}
+                        />
+
+                        <NextButton
+                          steps={steps}
+                          activeStep={activeStep}
+                          passedSteps={passedSteps}
+                          maxSteps={maxSteps}
+                          goNextStep={actions.goNextStep}
+                        >
+                            &nbsp;&gt;&nbsp;
+                        </NextButton>
+                    </div>
+
+                    <MyModal
+                      open={modalIsOpen}
+                      actions={actions}
+                      steps={steps}
+                    />
+                </div>
+            </DocumentTitle>
+        ); }
+}
 
 TouhouTest.propTypes = {
-    steps: PropTypes.array.isRequired,
-    maxSteps: PropTypes.number.isRequired,
-    activeStep: PropTypes.number.isRequired,
-    passedSteps: PropTypes.number.isRequired,
-    modalIsOpen: PropTypes.bool.isRequired,
+    steps: PropTypes.array,
+    maxSteps: PropTypes.number,
+    activeStep: PropTypes.number,
+    passedSteps: PropTypes.number,
+    modalIsOpen: PropTypes.bool,
+    inProgress: PropTypes.bool.isRequired,
     actions: PropTypes.object,
 };
 
@@ -80,6 +101,7 @@ function mapStateToProps(state) {
         activeStep: state.test.activeStep,
         passedSteps: state.test.passedSteps,
         modalIsOpen: state.test.modalIsOpen,
+        inProgress: state.test.inProgress,
     };
 }
 

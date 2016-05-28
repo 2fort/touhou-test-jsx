@@ -1,5 +1,17 @@
 import * as types from '../constants/ActionTypes';
 
+export function beginTest() {
+    return {
+        type: types.TEST_BEGIN,
+    };
+}
+
+export function endTest() {
+    return {
+        type: types.TEST_END,
+    };
+}
+
 export function goPrevStep() {
     return {
         type: types.GO_PREV_STEP,
@@ -41,5 +53,17 @@ export function answerGiven(step) {
     return {
         type: types.ANSWER_GIVEN,
         step,
+    };
+}
+
+export function showResetButton() {
+    return {
+        type: types.SHOW_RESET_BUTTON,
+    };
+}
+
+export function hideResetButton() {
+    return {
+        type: types.HIDE_RESET_BUTTON,
     };
 }

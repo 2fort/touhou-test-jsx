@@ -1,758 +1,1641 @@
 [
 {
     "name": "Reimu Hakurei",
-    "imgurl": "80b1a04d92135d099bbadc9a39aec8ff.jpg",
-    "artAuthor": "のっさん",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49406481"
+    "image": "80b1a04d92135d099bbadc9a39aec8ff.jpg",
+    "art": {
+        "author": "のっさん",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49406481"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Reimu_Hakurei"
 },
 {
     "name": "Marisa Kirisame",
-    "imgurl": "99dfd0650facd7ad5b8ea5138c2ca5ac.png",
-    "artAuthor": "結之",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55040531"
+    "image": "99dfd0650facd7ad5b8ea5138c2ca5ac.png",
+    "art": {
+        "author": "結之",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55040531"
+    },
+    "debut": {
+        "game": "Story of Eastern Wonderland",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Marisa_Kirisame"
 },
 {
     "name": "Rumia",
-    "imgurl": "e53f1584c673a837c00e91e15b6f2d91.png",
-    "artAuthor": "ヲヲグニ",
-    "artUrl": "https://twitter.com/ooguni/status/678219938054541312"
+    "image": "e53f1584c673a837c00e91e15b6f2d91.png",
+    "art": {
+        "author": "ヲヲグニ",
+        "url": "https://twitter.com/ooguni/status/678219938054541312"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Rumia"
 },
 {
     "name": "Daiyousei",
-    "imgurl": "107bce7b96fbd1aa4dfb41db4f1d6cd7.jpg",
-    "artAuthor": "EO@次は例大祭",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54676672"
+    "image": "107bce7b96fbd1aa4dfb41db4f1d6cd7.jpg",
+    "art": {
+        "author": "EO@次は例大祭",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54676672"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Daiyousei"
 },
 {
     "name": "Cirno",
-    "imgurl": "8090e4e656e9d2bfe5320221fe88e623.jpg",
-    "artAuthor": "X&X&X",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51702732"
+    "image": "8090e4e656e9d2bfe5320221fe88e623.jpg",
+    "art": {
+        "author": "X&X&X",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51702732"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Cirno"
 },
 {
     "name": "Hong Meiling",
-    "imgurl": "49d0909e1025a33338eaa86184456c1d.jpg",
-    "artAuthor": "伊吹のつ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49507125"
+    "image": "49d0909e1025a33338eaa86184456c1d.jpg",
+    "art": {
+        "author": "伊吹のつ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49507125"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Hong_Meiling"
 },
 {
     "name": "Koakuma",
-    "imgurl": "927b43355edfad3765dafe09781886ba.jpg",
-    "artAuthor": "祭唄",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55265382"
+    "image": "927b43355edfad3765dafe09781886ba.jpg",
+    "art": {
+        "author": "祭唄",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55265382"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Koakuma"
 },
 {
     "name": "Patchouli Knowledge",
-    "imgurl": "a21320b7e781d0d55c3d8fedbe8d5ae9.jpg",
-    "artAuthor": "クロス",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54750563"
+    "image": "a21320b7e781d0d55c3d8fedbe8d5ae9.jpg",
+    "art": {
+        "author": "クロス",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54750563"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Patchouli_Knowledge"
 },
 {
     "name": "Sakuya Izayoi",
-    "imgurl": "3e77505c3b6ad041c8df5c356112fa6a.jpg",
-    "artAuthor": "アシュ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54954567"
+    "image": "3e77505c3b6ad041c8df5c356112fa6a.jpg",
+    "art": {
+        "author": "アシュ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54954567"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sakuya_Izayoi"
 },
 {
     "name": "Remilia Scarlet",
-    "imgurl": "d17fd67de5d87276f7f5c3d3801f495e.jpg",
-    "artAuthor": "ミスモ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=36185314"
+    "image": "d17fd67de5d87276f7f5c3d3801f495e.jpg",
+    "art": {
+        "author": "ミスモ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=36185314"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Remilia_Scarlet"
 },
 {
     "name": "Flandre Scarlet",
-    "imgurl": "9508005e828f97cd436dea503d297f4f.jpg",
-    "artAuthor": "ミスモ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=36063366"
+    "image": "9508005e828f97cd436dea503d297f4f.jpg",
+    "art": {
+        "author": "ミスモ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=36063366"
+    },
+    "debut": {
+        "game": "The Embodiment of Scarlet Devil",
+        "year": "2002"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Flandre_Scarlet"
 },
 {
     "name": "Letty Whiterock",
-    "imgurl": "bb32bcc8e0b3a551e3fe7431f569b9a1.jpg",
-    "artAuthor": "スコッティ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=15497420"
+    "image": "bb32bcc8e0b3a551e3fe7431f569b9a1.jpg",
+    "art": {
+        "author": "スコッティ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=15497420"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Letty_Whiterock"
 },
 {
     "name": "Chen",
-    "imgurl": "73818cb21fe7ceb8a40f2d70fac46a3f.jpg",
-    "artAuthor": "するめり",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53632400"
+    "image": "73818cb21fe7ceb8a40f2d70fac46a3f.jpg",
+    "art": {
+        "author": "するめり",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53632400"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Chen"
 },
 {
     "name": "Alice Margatroid",
-    "imgurl": "796efd2f0188dfd46f981396455ce9e2.png",
-    "artAuthor": "いがくせい",
-    "artUrl": "https://twitter.com/24igakusei/status/693795746848440320"
+    "image": "796efd2f0188dfd46f981396455ce9e2.png",
+    "art": {
+        "author": "いがくせい",
+        "url": "https://twitter.com/24igakusei/status/693795746848440320"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Alice_Margatroid"
 },
 {
     "name": "Lily White",
-    "imgurl": "9b61a766d102910298b29880097cd8d2.png",
-    "artAuthor": "ゆたまろ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51330813"
+    "image": "9b61a766d102910298b29880097cd8d2.png",
+    "art": {
+        "author": "ゆたまろ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51330813"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Lily_White"
 },
 {
     "name": "Lyrica Prismriver",
-    "imgurl": "b10358466f4992dba992d424d927d6fb.jpg",
-    "artAuthor": "むびぃ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39100364"
+    "image": "b10358466f4992dba992d424d927d6fb.jpg",
+    "art": {
+        "author": "むびぃ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39100364"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Lyrica_Prismriver"
 },
 {
     "name": "Lunasa Prismriver",
-    "imgurl": "e7df693b77db020c82bb17e0210711c5.png",
-    "artAuthor": "baba@紅楼夢えー07a",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54346497"
+    "image": "e7df693b77db020c82bb17e0210711c5.png",
+    "art": {
+        "author": "baba@紅楼夢えー07a",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54346497"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Lunasa_Prismriver"
 },
 {
     "name": "Merlin Prismriver",
-    "imgurl": "ef9302e1d1ffffddb953eca67f742247.png",
-    "artAuthor": "くろまり",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=28078059"
+    "image": "ef9302e1d1ffffddb953eca67f742247.png",
+    "art": {
+        "author": "くろまり",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=28078059"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Merlin_Prismriver"
 },
 {
     "name": "Youmu Konpaku",
-    "imgurl": "657352afe601eda850484b9f3881aafd.png",
-    "artAuthor": "秋月ミヤ",
-    "artUrl": "https://twitter.com/miya_25cat/status/688723982409830400"
+    "image": "657352afe601eda850484b9f3881aafd.png",
+    "art": {
+        "author": "秋月ミヤ",
+        "url": "https://twitter.com/miya_25cat/status/688723982409830400"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Youmu_Konpaku"
 },
 {
     "name": "Yuyuko Saigyouji",
-    "imgurl": "cd89a763ced8aac0353716114534ceff.jpg",
-    "artAuthor": "みなみな",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50136724"
+    "image": "cd89a763ced8aac0353716114534ceff.jpg",
+    "art": {
+        "author": "みなみな",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50136724"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yuyuko_Saigyouji"
 },
 {
     "name": "Ran Yakumo",
-    "imgurl": "d684c544870a4505b2b882e6f9317f3b.jpg",
-    "artAuthor": "EO@次は例大祭",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54676672"
+    "image": "d684c544870a4505b2b882e6f9317f3b.jpg",
+    "art": {
+        "author": "EO@次は例大祭",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54676672"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Ran_Yakumo"
 },
 {
     "name": "Yukari Yakumo",
-    "imgurl": "9acdbad3b0be4064057100018b5bce10.jpg",
-    "artAuthor": "ノヴェル",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=11088706"
+    "image": "9acdbad3b0be4064057100018b5bce10.jpg",
+    "art": {
+        "author": "ノヴェル",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=11088706"
+    },
+    "debut": {
+        "game": "Perfect Cherry Blossom",
+        "year": "2003"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yukari_Yakumo"
 },
 {
     "name": "Suika Ibuki",
-    "imgurl": "9fc33970743c61cffbedfb16cf13e06b.jpg",
-    "artAuthor": "竹森",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55293316"
+    "image": "9fc33970743c61cffbedfb16cf13e06b.jpg",
+    "art": {
+        "author": "竹森",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55293316"
+    },
+    "debut": {
+        "game": "Immaterial and Missing Power",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Suika_Ibuki"
 },
 {
     "name": "Wriggle Nightbug",
-    "imgurl": "af9b8cb7285caa19b45b754c980a9d65.png",
-    "artAuthor": "暇虫",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55059612"
+    "image": "af9b8cb7285caa19b45b754c980a9d65.png",
+    "art": {
+        "author": "暇虫",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55059612"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Wriggle_Nightbug"
 },
 {
     "name": "Mystia Lorelei",
-    "imgurl": "a8309ad71b003c90b19c788b473426f9.png",
-    "artAuthor": "ごとー・お仕事募集中",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55576269"
+    "image": "a8309ad71b003c90b19c788b473426f9.png",
+    "art": {
+        "author": "ごとー・お仕事募集中",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55576269"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Mystia_Lorelei"
 },
 {
     "name": "Keine Kamishirasawa",
-    "imgurl": "37f7bbcc4928c735ef02844f4291a2fa.jpg",
-    "artAuthor": "HASU",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=42956700"
+    "image": "37f7bbcc4928c735ef02844f4291a2fa.jpg",
+    "art": {
+        "author": "HASU",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=42956700"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Keine_Kamishirasawa"
 },
 {
     "name": "Tewi Inaba",
-    "imgurl": "79f4a99358acbf3f06b8d47a1fba0a9a.jpg",
-    "artAuthor": "口イノ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39183606"
+    "image": "79f4a99358acbf3f06b8d47a1fba0a9a.jpg",
+    "art": {
+        "author": "口イノ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39183606"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Tewi_Inaba"
 },
 {
     "name": "Reisen Udongein Inaba",
-    "imgurl": "ef2ad62f741b179de27c7231143a581a.jpg",
-    "artAuthor": "シロン＠２０１６年版",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50768695"
+    "image": "ef2ad62f741b179de27c7231143a581a.jpg",
+    "art": {
+        "author": "シロン＠２０１６年版",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50768695"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Reisen_Udongein_Inaba"
 },
 {
     "name": "Eirin Yagokoro",
-    "imgurl": "7fc8ef0e0b6c9eda4ea78f2c4c276935.jpg",
-    "artAuthor": "Ninamo-chan",
-    "artUrl": "http://ninamo-chan.deviantart.com/art/Eirin-Yagokoro-August-397477379"
+    "image": "7fc8ef0e0b6c9eda4ea78f2c4c276935.jpg",
+    "art": {
+        "author": "Ninamo-chan",
+        "url": "http://ninamo-chan.deviantart.com/art/Eirin-Yagokoro-August-397477379"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Eirin_Yagokoro"
 },
 {
     "name": "Kaguya Houraisan",
-    "imgurl": "5a02820318aca659d727e63a6b104ec5.jpg",
-    "artAuthor": "こずえあかり",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50175525"
+    "image": "5a02820318aca659d727e63a6b104ec5.jpg",
+    "art": {
+        "author": "こずえあかり",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50175525"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kaguya_Houraisan"
 },
 {
     "name": "Fujiwara no Mokou",
-    "imgurl": "2e856b61ab179aca8c52c10e2186b3b6.jpg",
-    "artAuthor": "くぇ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48700716"
+    "image": "2e856b61ab179aca8c52c10e2186b3b6.jpg",
+    "art": {
+        "author": "くぇ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48700716"
+    },
+    "debut": {
+        "game": "Imperishable Night",
+        "year": "2004"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Fujiwara_no_Mokou"
 },
 {
     "name": "Aya Shameimaru",
-    "imgurl": "c18a7d5882d48f10ad7ecd9abc367d22.jpg",
-    "artAuthor": "噗呼噗呼",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53546976"
+    "image": "c18a7d5882d48f10ad7ecd9abc367d22.jpg",
+    "art": {
+        "author": "噗呼噗呼",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53546976"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Flower View",
+        "year": "2005"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Aya_Shameimaru"
 },
 {
     "name": "Medicine Melancholy",
-    "imgurl": "112240e2f889c402aa4affaf397c15db.jpg",
-    "artAuthor": "彩月まさき＠お仕事募集中",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53210476"
+    "image": "112240e2f889c402aa4affaf397c15db.jpg",
+    "art": {
+        "author": "彩月まさき＠お仕事募集中",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53210476"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Flower View",
+        "year": "2005"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Medicine_Melancholy"
 },
 {
     "name": "Yuuka Kazami",
-    "imgurl": "be4896835533914433bb317af54fb8d6.png",
-    "artAuthor": "baba魂は名華祭F-21と共に",
-    "artUrl": "https://twitter.com/baba15207048/status/676893931259494401"
+    "image": "be4896835533914433bb317af54fb8d6.png",
+    "art": {
+        "author": "baba魂は名華祭F-21と共に",
+        "url": "https://twitter.com/baba15207048/status/676893931259494401"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Flower View",
+        "year": "2005"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yuuka_Kazami"
 },
 {
     "name": "Komachi Onozuka",
-    "imgurl": "96be1a8483116abbfc76867445eae45c.jpg",
-    "artAuthor": "moneti (daifuku)",
-    "artUrl": "http://seiga.nicovideo.jp/seiga/im1706823"
+    "image": "96be1a8483116abbfc76867445eae45c.jpg",
+    "art": {
+        "author": "moneti (daifuku)",
+        "url": "http://seiga.nicovideo.jp/seiga/im1706823"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Flower View",
+        "year": "2005"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Komachi_Onozuka"
 },
 {
     "name": "Eiki Shiki",
-    "imgurl": "a37230eddaf2dcdec8359d8dee6c1397.jpg",
-    "artAuthor": "モノ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=46363933"
+    "image": "a37230eddaf2dcdec8359d8dee6c1397.jpg",
+    "art": {
+        "author": "モノ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=46363933"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Flower View",
+        "year": "2005"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Eiki_Shiki,_Yamaxanadu"
 },
 {
     "name": "Shizuha Aki",
-    "imgurl": "f6509dddfafabcae11c5e40df0af2ad7.png",
-    "artAuthor": "baba魂は名華祭F-21と共に",
-    "artUrl": "https://twitter.com/baba15207048/status/684507494010368000"
+    "image": "f6509dddfafabcae11c5e40df0af2ad7.png",
+    "art": {
+        "author": "baba魂は名華祭F-21と共に",
+        "url": "https://twitter.com/baba15207048/status/684507494010368000"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Shizuha_Aki"
 },
 {
     "name": "Minoriko Aki",
-    "imgurl": "5d95f379057e3cf33770ff7cbc263345.png",
-    "artAuthor": "うる＠御用の際は本アカウントへ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49486323"
+    "image": "5d95f379057e3cf33770ff7cbc263345.png",
+    "art": {
+        "author": "うる＠御用の際は本アカウントへ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49486323"
+    },
+
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Minoriko_Aki"
 },
 {
     "name": "Hina Kagiyama",
-    "imgurl": "e2c750b8146a00fa55e190e1b0a1c518.png",
-    "artAuthor": "まひる",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50832372"
+    "image": "e2c750b8146a00fa55e190e1b0a1c518.png",
+    "art": {
+        "author": "まひる",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50832372"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Hina_Kagiyama"
 },
 {
     "name": "Nitori Kawashiro",
-    "imgurl": "01259f463df1b02e81d496f46ea016a1.png",
-    "artAuthor": "もりのほん",
-    "artUrl": "https://twitter.com/morinohon/status/615864260007059456/photo/1"
+    "image": "01259f463df1b02e81d496f46ea016a1.png",
+    "art": {
+        "author": "もりのほん",
+        "url": "https://twitter.com/morinohon/status/615864260007059456/photo/1"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Nitori_Kawashiro"
 },
 {
     "name": "Momiji Inubashiri",
-    "imgurl": "b568413e52c16d9fa9398bc58feb8302.jpg",
-    "artAuthor": "ペコネコ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=35582618"
+    "image": "b568413e52c16d9fa9398bc58feb8302.jpg",
+    "art": {
+        "author": "ペコネコ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=35582618"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Momiji_Inubashiri"
 },
 {
     "name": "Sanae Kochiya",
-    "imgurl": "a4d68f65e6fb58ebb67c68edb3c6f6b8.png",
-    "artAuthor": "さとうきび",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54297982"
+    "image": "a4d68f65e6fb58ebb67c68edb3c6f6b8.png",
+    "art": {
+        "author": "さとうきび",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54297982"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sanae_Kochiya"
 },
 {
     "name": "Kanako Yasaka",
-    "imgurl": "230fe169634450f5081a03761a7ea047.jpg",
-    "artAuthor": "ペコネコ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=33041136"
+    "image": "230fe169634450f5081a03761a7ea047.jpg",
+    "art": {
+        "author": "ペコネコ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=33041136"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kanako_Yasaka"
 },
 {
     "name": "Suwako Moriya",
-    "imgurl": "a08ab3a8182e0d7eff8578f1a859b864.png",
-    "artAuthor": "まひる",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50832372"
+    "image": "a08ab3a8182e0d7eff8578f1a859b864.png",
+    "art": {
+        "author": "まひる",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50832372"
+    },
+    "debut": {
+        "game": "Mountain of Faith",
+        "year": "2007"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Suwako_Moriya"
 },
 {
     "name": "Iku Nagae",
-    "imgurl": "f13bc72dc22b4d8bb49b3d47d3db9225.png",
-    "artAuthor": "うぬ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=38908250"
+    "image": "f13bc72dc22b4d8bb49b3d47d3db9225.png",
+    "art": {
+        "author": "うぬ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=38908250"
+    },
+    "debut": {
+        "game": "Scarlet Weather Rhapsody",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Iku_Nagae"
 },
 {
     "name": "Tenshi Hinanawi",
-    "imgurl": "ef28fb7a8f25c93dffb0ac03f3caf816.jpg",
-    "artAuthor": "おぱんちゅ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54674108"
+    "image": "ef28fb7a8f25c93dffb0ac03f3caf816.jpg",
+    "art": {
+        "author": "おぱんちゅ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54674108"
+    },
+    "debut": {
+        "game": "Scarlet Weather Rhapsody",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Tenshi_Hinanawi"
 },
 {
     "name": "Kisume",
-    "imgurl": "a8ee9aed0cc8b865dbe57fa458f22e0c.jpg",
-    "artAuthor": "くもえもん",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=35725833"
+    "image": "a8ee9aed0cc8b865dbe57fa458f22e0c.jpg",
+    "art": {
+        "author": "くもえもん",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=35725833"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kisume"
 },
 {
     "name": "Yamame Kurodani",
-    "imgurl": "1617c0c7047ad79e1d32f43e6107ffce.png",
-    "artAuthor": "かん",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55558353"
+    "image": "1617c0c7047ad79e1d32f43e6107ffce.png",
+    "art": {
+        "author": "かん",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55558353"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yamame_Kurodani"
 },
 {
     "name": "Parsee Mizuhashi",
-    "imgurl": "6ffd61a4edeb9652e6040252d4a5cff9.jpg",
-    "artAuthor": "ryosios",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39085802"
+    "image": "6ffd61a4edeb9652e6040252d4a5cff9.jpg",
+    "art": {
+        "author": "ryosios",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39085802"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Parsee_Mizuhashi"
 },
 {
     "name": "Yuugi Hoshiguma",
-    "imgurl": "6cacb514a8909a158b452b57d08eb8c6.jpg",
-    "artAuthor": "欅ちまき",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55019693"
+    "image": "6cacb514a8909a158b452b57d08eb8c6.jpg",
+    "art": {
+        "author": "欅ちまき",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55019693"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yuugi_Hoshiguma"
 },
 {
     "name": "Satori Komeiji",
-    "imgurl": "0d653025f709d95776da378e19677714.png",
-    "artAuthor": "baba魂は名華祭F-21と共に",
-    "artUrl": "https://twitter.com/baba15207048/status/706601710588801024"
+    "image": "0d653025f709d95776da378e19677714.png",
+    "art": {
+        "author": "baba魂は名華祭F-21と共に",
+        "url": "https://twitter.com/baba15207048/status/706601710588801024"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Satori_Komeiji"
 },
 {
     "name": "Rin Kaenbyou",
-    "imgurl": "41a92e3d14d2015d078505df7545e4a4.png",
-    "artAuthor": "baba魂は名華祭F-21と共に",
-    "artUrl": "https://twitter.com/baba15207048/status/708409556943052801/photo/1"
+    "image": "41a92e3d14d2015d078505df7545e4a4.png",
+    "art": {
+        "author": "baba魂は名華祭F-21と共に",
+        "url": "https://twitter.com/baba15207048/status/708409556943052801/photo/1"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Rin_Kaenbyou"
 },
 {
     "name": "Utsuho Reiuji",
-    "imgurl": "349dbc82f9af787346d6d095a9d2714e.jpg",
-    "artAuthor": "Yuli",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54254824"
+    "image": "349dbc82f9af787346d6d095a9d2714e.jpg",
+    "art": {
+        "author": "Yuli",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54254824"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Utsuho_Reiuji"
 },
 {
     "name": "Koishi Komeiji",
-    "imgurl": "20872685d1960ac7130d79c9ee8c6038.png",
-    "artAuthor": "まひる",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=41616493"
+    "image": "20872685d1960ac7130d79c9ee8c6038.png",
+    "art": {
+        "author": "まひる",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=41616493"
+    },
+    "debut": {
+        "game": "Subterranean Animism",
+        "year": "2008"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Koishi_Komeiji"
 },
 {
     "name": "Nazrin",
-    "imgurl": "dabe23a3c4c4b7ed10cfa2a9673cdda4.png",
-    "artAuthor": "りひと",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54149621"
+    "image": "dabe23a3c4c4b7ed10cfa2a9673cdda4.png",
+    "art": {
+        "author": "りひと",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54149621"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Nazrin"
 },
 {
     "name": "Kogasa Tatara",
-    "imgurl": "afe6c0dafba8fcf7a5fe53a0d21ae56f.jpg",
-    "artAuthor": "もんろーる",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55574536"
+    "image": "afe6c0dafba8fcf7a5fe53a0d21ae56f.jpg",
+    "art": {
+        "author": "もんろーる",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55574536"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kogasa_Tatara"
 },
 {
     "name": "Ichirin Kumoi",
-    "imgurl": "e6dfe1782ba033b0bd5fb749c9e17e7f.jpg",
-    "artAuthor": "鳥居すみ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39064220"
+    "image": "e6dfe1782ba033b0bd5fb749c9e17e7f.jpg",
+    "art": {
+        "author": "鳥居すみ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39064220"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Ichirin_Kumoi"
 },
 {
     "name": "Minamitsu Murasa",
-    "imgurl": "b1947a255f995f17b5a67594296533cd.png",
-    "artAuthor": "みよ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48988670"
+    "image": "b1947a255f995f17b5a67594296533cd.png",
+    "art": {
+        "author": "みよ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48988670"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Minamitsu_Murasa"
 },
 {
     "name": "Shou Toramaru",
-    "imgurl": "f9a24314471245daae6b45035c34dec4.jpg",
-    "artAuthor": "中壱@名華祭D-03",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55576466"
+    "image": "f9a24314471245daae6b45035c34dec4.jpg",
+    "art": {
+        "author": "中壱@名華祭D-03",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55576466"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Shou_Toramaru"
 },
 {
     "name": "Byakuren Hijiri",
-    "imgurl": "64e04276d326c5fb35c7899252ed7d86.png",
-    "artAuthor": "卯林◆名華祭B-21",
-    "artUrl": "https://twitter.com/urin_/status/622771511175200768/photo/1"
+    "image": "64e04276d326c5fb35c7899252ed7d86.png",
+    "art": {
+        "author": "卯林◆名華祭B-21",
+        "url": "https://twitter.com/urin_/status/622771511175200768/photo/1"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Byakuren_Hijiri"
 },
 {
     "name": "Nue Houjuu",
-    "imgurl": "db88c839c0f52eda7b774e7bb64942e4.jpg",
-    "artAuthor": "有馬紘一",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49714197"
+    "image": "db88c839c0f52eda7b774e7bb64942e4.jpg",
+    "art": {
+        "author": "有馬紘一",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49714197"
+    },
+    "debut": {
+        "game": "Undefined Fantastic Object",
+        "year": "2009"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Nue_Houjuu"
 },
 {
     "name": "Hatate Himekaidou",
-    "imgurl": "19fda228a246deb23c82536cf9b731be.jpg",
-    "artAuthor": "くろな",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37672047"
+    "image": "19fda228a246deb23c82536cf9b731be.jpg",
+    "art": {
+        "author": "くろな",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37672047"
+    },
+    "debut": {
+        "game": "Double Spoiler",
+        "year": "2010"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Hatate_Himekaidou"
 },
 {
     "name": "Kyouko Kasodani",
-    "imgurl": "08879b5db3545bad00431c41426ded74.jpg",
-    "artAuthor": "shone",
-    "artUrl": "http://shonep.tumblr.com/post/138743739153"
+    "image": "08879b5db3545bad00431c41426ded74.jpg",
+    "art": {
+        "author": "shone",
+        "url": "http://shonep.tumblr.com/post/138743739153"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kyouko_Kasodani"
 },
 {
     "name": "Yoshika Miyako",
-    "imgurl": "a61dab1df657cdea92a3c2d6f17d3c40.png",
-    "artAuthor": "うさ叉吉",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53057629"
+    "image": "a61dab1df657cdea92a3c2d6f17d3c40.png",
+    "art": {
+        "author": "うさ叉吉",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53057629"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yoshika_Miyako"
 },
 {
     "name": "Seiga Kaku",
-    "imgurl": "7906a58f3144374a14f19e30bfb0c519.jpg",
-    "artAuthor": "氷紋",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54872377"
+    "image": "7906a58f3144374a14f19e30bfb0c519.jpg",
+    "art": {
+        "author": "氷紋",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54872377"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Seiga_Kaku"
 },
 {
     "name": "Soga no Tojiko",
-    "imgurl": "823836f0665215a24f4461a3c6c62203.jpg",
-    "artAuthor": ".Sync",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39795158"
+    "image": "823836f0665215a24f4461a3c6c62203.jpg",
+    "art": {
+        "author": ".Sync",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39795158"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Soga_no_Tojiko"
 },
 {
     "name": "Mononobe no Futo",
-    "imgurl": "c80e723c5895672040fae7283d846b61.png",
-    "artAuthor": "跳助",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51737242"
+    "image": "c80e723c5895672040fae7283d846b61.png",
+    "art": {
+        "author": "跳助",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51737242"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Mononobe_no_Futo"
 },
 {
     "name": "Toyosatomimi no Miko",
-    "imgurl": "b75837c783c3ca7a6f25e1d49ce12f15.png",
-    "artAuthor": "まくわうに",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55636107"
+    "image": "b75837c783c3ca7a6f25e1d49ce12f15.png",
+    "art": {
+        "author": "まくわうに",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55636107"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Toyosatomimi_no_Miko"
 },
 {
     "name": "Mamizou Futatsuiwa",
-    "imgurl": "bb16eb82a66567d24e4f386744dbda1c.png",
-    "artAuthor": "かかお＠C89西は-06b",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48639511"
+    "image": "bb16eb82a66567d24e4f386744dbda1c.png",
+    "art": {
+        "author": "かかお＠C89西は-06b",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48639511"
+    },
+    "debut": {
+        "game": "Ten Desires",
+        "year": "2011"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Mamizou_Futatsuiwa"
 },
 {
     "name": "Hata no Kokoro",
-    "imgurl": "f2593e5e302f986ed81fee79b00a4e03.jpg",
-    "artAuthor": "栄智ゆう",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55551234"
+    "image": "f2593e5e302f986ed81fee79b00a4e03.jpg",
+    "art": {
+        "author": "栄智ゆう",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55551234"
+    },
+    "debut": {
+        "game": "Hopeless Masquerade",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Hata_no_Kokoro"
 },
 {
     "name": "Wakasagihime",
-    "imgurl": "cbf3016fcb10b9614e64e2d0aca56587.jpg",
-    "artAuthor": "うらないし",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51472196"
+    "image": "cbf3016fcb10b9614e64e2d0aca56587.jpg",
+    "art": {
+        "author": "うらないし",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51472196"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Wakasagihime"
 },
 {
     "name": "Sekibanki",
-    "imgurl": "f3925087fdee292427e890842bff9905.jpg",
-    "artAuthor": "ミーモク",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52323789"
+    "image": "f3925087fdee292427e890842bff9905.jpg",
+    "art": {
+        "author": "ミーモク",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52323789"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sekibanki"
 },
 {
     "name": "Kagerou Imaizumi",
-    "imgurl": "a4bbdd971c7b135dff322c8c57578d3b.jpg",
-    "artAuthor": "e.o.",
-    "artUrl": "http://lohas.nicoseiga.jp/priv/3538125?e=1383196779&h=d8923d201504457944b096d9f74d15eb43023a13"
+    "image": "a4bbdd971c7b135dff322c8c57578d3b.jpg",
+    "art": {
+        "author": "e.o.",
+        "url": "http://lohas.nicoseiga.jp/priv/3538125?e=1383196779&h=d8923d201504457944b096d9f74d15eb43023a13"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kagerou_Imaizumi"
 },
 {
     "name": "Benben Tsukumo",
-    "imgurl": "5224c1e3038c548492794998704b802d.png",
-    "artAuthor": "紅月カイ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40325376"
+    "image": "5224c1e3038c548492794998704b802d.png",
+    "art": {
+        "author": "紅月カイ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40325376"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Benben_Tsukumo"
 },
 {
     "name": "Yatsuhashi Tsukumo",
-    "imgurl": "d2e7eaa4288e2795fe161ad3d286529d.jpg",
-    "artAuthor": "うらないし",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51472196"
+    "image": "d2e7eaa4288e2795fe161ad3d286529d.jpg",
+    "art": {
+        "author": "うらないし",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51472196"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yatsuhashi_Tsukumo"
 },
 {
     "name": "Seija Kijin",
-    "imgurl": "6400da86e66408b513b6976944b2f55b.jpg",
-    "artAuthor": "ウーマル",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52606689"
+    "image": "6400da86e66408b513b6976944b2f55b.jpg",
+    "art": {
+        "author": "ウーマル",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52606689"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Seija_Kijin"
 },
 {
     "name": "Shinmyoumaru Sukuna",
-    "imgurl": "2b5238a58a217a421e62e166021be71f.png",
-    "artAuthor": "LMK.",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53215485"
+    "image": "2b5238a58a217a421e62e166021be71f.png",
+    "art": {
+        "author": "LMK.",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53215485"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Shinmyoumaru_Sukuna"
 },
 {
     "name": "Raiko Horikawa",
-    "imgurl": "d186003a17b7fdfe0e0f3558636f89b4.png",
-    "artAuthor": "yutaka saki shu",
-    "artUrl": "http://lohas.nicoseiga.jp/priv/4cf2eb1443cd635c6075dfad12aef0dc544677cc/1455886510/5586996"
+    "image": "d186003a17b7fdfe0e0f3558636f89b4.png",
+    "art": {
+        "author": "yutaka saki shu",
+        "url": "http://lohas.nicoseiga.jp/priv/4cf2eb1443cd635c6075dfad12aef0dc544677cc/1455886510/5586996"
+    },
+    "debut": {
+        "game": "Double Dealing Character",
+        "year": "2013"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Raiko_Horikawa"
 },
 {
     "name": "Sumireko Usami",
-    "imgurl": "7710f0f2c789b80f47bff756ba4e088b.jpg",
-    "artAuthor": "EO@次は例大祭",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50349017"
+    "image": "7710f0f2c789b80f47bff756ba4e088b.jpg",
+    "art": {
+        "author": "EO@次は例大祭",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50349017"
+    },
+    "debut": {
+        "game": "Urban Legend in Limbo",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sumireko_Usami"
 },
 {
     "name": "Seiran",
-    "imgurl": "4447ef87e1a593724ba93cdbb0d527e3.jpg",
-    "artAuthor": "かかお＠C89西は-06b",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52432446"
+    "image": "4447ef87e1a593724ba93cdbb0d527e3.jpg",
+    "art": {
+        "author": "かかお＠C89西は-06b",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52432446"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Seiran"
 },
 {
     "name": "Ringo",
-    "imgurl": "a73f978caa88aec10e9f1a5bf0144c33.jpg",
-    "artAuthor": "ななもと",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55185202"
+    "image": "a73f978caa88aec10e9f1a5bf0144c33.jpg",
+    "art": {
+        "author": "ななもと",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55185202"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Ringo"
 },
 {
     "name": "Doremy Sweet",
-    "imgurl": "2d7b040b52b57e91e40bc6699e1dd86f.jpg",
-    "artAuthor": "あぶそる",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52317687"
+    "image": "2d7b040b52b57e91e40bc6699e1dd86f.jpg",
+    "art": {
+        "author": "あぶそる",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52317687"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Doremy_Sweet"
 },
 {
     "name": "Sagume Kishin",
-    "imgurl": "04cce02a2a2c5f6079a04b8697e0d15b.jpg",
-    "artAuthor": "もんろーる",
-    "artUrl": "https://twitter.com/monro_ru/status/703876595560284161"
+    "image": "04cce02a2a2c5f6079a04b8697e0d15b.jpg",
+    "art": {
+        "author": "もんろーる",
+        "url": "https://twitter.com/monro_ru/status/703876595560284161"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sagume_Kishin"
 },
 {
     "name": "Clownpiece",
-    "imgurl": "0f4d1097a97d92596638d5c04708ee26.png",
-    "artAuthor": "ayami chiha",
-    "artUrl": "http://www.dobuusagi.com/dBu21st/images/clapi.png"
+    "image": "0f4d1097a97d92596638d5c04708ee26.png",
+    "art": {
+        "author": "ayami chiha",
+        "url": "http://www.dobuusagi.com/dBu21st/images/clapi.png"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Clownpiece"
 },
 {
     "name": "Junko",
-    "imgurl": "3f1da8f0b1df0da8f96c56b8206e3321.jpg",
-    "artAuthor": "紅ずわい＠神子様のパンツ",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53532993"
+    "image": "3f1da8f0b1df0da8f96c56b8206e3321.jpg",
+    "art": {
+        "author": "紅ずわい＠神子様のパンツ",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53532993"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Junko"
 },
 {
     "name": "Hecatia Lapislazuli",
-    "imgurl": "590a986402560de24492043ba6414d4d.jpg",
-    "artAuthor": "こすも",
-    "artUrl": "https://twitter.com/kosumo_asd/status/701781187400851456"
+    "image": "590a986402560de24492043ba6414d4d.jpg",
+    "art": {
+        "author": "こすも",
+        "url": "https://twitter.com/kosumo_asd/status/701781187400851456"
+    },
+    "debut": {
+        "game": "Legacy of Lunatic Kingdom",
+        "year": "2015"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Hecatia_Lapislazuli"
 },
 {
     "name": "Rinnosuke Morichika",
-    "imgurl": "d3e694e0439d408b67da23df24b6c5ef.png",
-    "artAuthor": "かかお＠C89西は-06b",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=33278263"
+    "image": "d3e694e0439d408b67da23df24b6c5ef.png",
+    "art": {
+        "author": "かかお＠C89西は-06b",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=33278263"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Rinnosuke_Morichika"
 },
 {
     "name": "Kasen Ibaraki",
-    "imgurl": "64aedb645bc7ed380641eade55ff61b4.jpg",
-    "artAuthor": "うらないし",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51472196"
+    "image": "64aedb645bc7ed380641eade55ff61b4.jpg",
+    "art": {
+        "author": "うらないし",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51472196"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kasen_Ibaraki"
 },
 {
     "name": "Luna Child",
-    "imgurl": "f7aebbe478dce1ab94f5af97b6ff3cf7.png",
-    "artAuthor": "dairi",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49559022"
+    "image": "f7aebbe478dce1ab94f5af97b6ff3cf7.png",
+    "art": {
+        "author": "dairi",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49559022"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Luna_Child"
 },
 {
     "name": "Star Sapphire",
-    "imgurl": "7e11490b5f4bd4f4947b1b892ccc0aaf.jpg",
-    "artAuthor": "比良坂",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37539669"
+    "image": "7e11490b5f4bd4f4947b1b892ccc0aaf.jpg",
+    "art": {
+        "author": "比良坂",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37539669"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Star_Sapphire"
 },
 {
     "name": "Sunny Milk",
-    "imgurl": "a5f980fe40ecc0900c7667e351c4f8db.png",
-    "artAuthor": "ClearEchoes",
-    "artUrl": "http://clearechoes.deviantart.com/art/Touhou-Sunymilk-506314079"
+    "image": "a5f980fe40ecc0900c7667e351c4f8db.png",
+    "art": {
+        "author": "ClearEchoes",
+        "url": "http://clearechoes.deviantart.com/art/Touhou-Sunymilk-506314079"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sunny_Milk"
 },
 {
     "name": "Watatsuki no Toyohime",
-    "imgurl": "5b576b8fd69cbf53afeb609c99507a79.jpg",
-    "artAuthor": "Sui.",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39062984"
+    "image": "5b576b8fd69cbf53afeb609c99507a79.jpg",
+    "art": {
+        "author": "Sui.",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39062984"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Watatsuki_no_Toyohime"
 },
 {
     "name": "Watatsuki no Yorihime",
-    "imgurl": "be65a53d09cec660ec58eeee6357eaac.jpg",
-    "artAuthor": "あとり＠C89三日目東Ｔ31b",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40086622"
+    "image": "be65a53d09cec660ec58eeee6357eaac.jpg",
+    "art": {
+        "author": "あとり＠C89三日目東Ｔ31b",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40086622"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Watatsuki_no_Yorihime"
 },
 {
     "name": "Kosuzu Motoori",
-    "imgurl": "0b5ccc93b1a3b3699aaa95a8617c0193.jpg",
-    "artAuthor": "音無空太（低产ing）",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50873812"
+    "image": "0b5ccc93b1a3b3699aaa95a8617c0193.jpg",
+    "art": {
+        "author": "音無空太（低产ing）",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50873812"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kosuzu_Motoori"
 },
 {
     "name": "Maribel Hearn",
-    "imgurl": "a2fe4e1f49b97097d98d98b6ffc07746.jpg",
-    "artAuthor": "e.o.",
-    "artUrl": "http://lohas.nicoseiga.jp/priv/dd617a269872889d3c9284ba8c0a6ea4d691cdf4/1424239311/4681790"
+    "image": "a2fe4e1f49b97097d98d98b6ffc07746.jpg",
+    "art": {
+        "author": "e.o.",
+        "url": "http://lohas.nicoseiga.jp/priv/dd617a269872889d3c9284ba8c0a6ea4d691cdf4/1424239311/4681790"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Maribel_Hearn"
 },
 {
     "name": "Renko Usami",
-    "imgurl": "eab95c730b8222bbfa5d15bbf66ff1b6.jpg",
-    "artAuthor": "EO@次は例大祭",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52909055"
+    "image": "eab95c730b8222bbfa5d15bbf66ff1b6.jpg",
+    "art": {
+        "author": "EO@次は例大祭",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=52909055"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Renko_Usami"
 },
 {
     "name": "Hieda no Akyuu",
-    "imgurl": "8536baa3668ad4c39a8ecd6d65ef188e.jpg",
-    "artAuthor": "qin",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=31400076"
+    "image": "8536baa3668ad4c39a8ecd6d65ef188e.jpg",
+    "art": {
+        "author": "qin",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=31400076"
+    },
+    "debut": {
+        "game": "(Print Work or Music CD)",
+        "year": ""
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Hieda_no_Akyuu"
 },
 {
     "name": "SinGyoku",
-    "imgurl": "44f4587a286ea3d6eb570f21812b8715.jpg",
-    "artAuthor": "katayama kei",
-    "artUrl": "http://img10.pixiv.net/img/wagocolo/16198961.jpg"
+    "image": "44f4587a286ea3d6eb570f21812b8715.jpg",
+    "art": {
+        "author": "katayama kei",
+        "url": "http://img10.pixiv.net/img/wagocolo/16198961.jpg"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/SinGyoku"
 },
 {
     "name": "YuugenMagan",
-    "imgurl": "05f325c58404f89af125aa7b21e75028.jpg",
-    "artAuthor": "wakanita",
-    "artUrl": "http://img27.pixiv.net/img/wakakoubou/23569516.jpg"
+    "image": "05f325c58404f89af125aa7b21e75028.jpg",
+    "art": {
+        "author": "wakanita",
+        "url": "http://img27.pixiv.net/img/wakakoubou/23569516.jpg"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/YuugenMagan"
 },
 {
     "name": "Elis",
-    "imgurl": "78df81d752c5ad72fb82cfb57b03280f.png",
-    "artAuthor": "viki00",
-    "artUrl": "http://img15.pixiv.net/img/viki00/8867836.png"
+    "image": "78df81d752c5ad72fb82cfb57b03280f.png",
+    "art": {
+        "author": "viki00",
+        "url": "http://img15.pixiv.net/img/viki00/8867836.png"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Elis"
 },
 {
     "name": "Sariel",
-    "imgurl": "bec3d7077a81f891db0d9605bf74412a.jpg",
-    "artAuthor": "aceshigh",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37583676"
+    "image": "bec3d7077a81f891db0d9605bf74412a.jpg",
+    "art": {
+        "author": "aceshigh",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37583676"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sariel"
 },
 {
     "name": "Mima",
-    "imgurl": "5adced6ec47c7bd59e332c7266810580.jpg",
-    "artAuthor": "berabou",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48941160"
+    "image": "5adced6ec47c7bd59e332c7266810580.jpg",
+    "art": {
+        "author": "berabou",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=48941160"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Mima"
 },
 {
     "name": "Kikuri",
-    "imgurl": "9715dc762bf21e886347ca10ced49ebc.png",
-    "artAuthor": "kaoru (gensou yuugen-an)",
-    "artUrl": "http://img29.pixiv.net/img/piko1015/21830950.png"
+    "image": "9715dc762bf21e886347ca10ced49ebc.png",
+    "art": {
+        "author": "kaoru (gensou yuugen-an)",
+        "url": "http://img29.pixiv.net/img/piko1015/21830950.png"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kikuri"
 },
 {
     "name": "Konngara",
-    "imgurl": "f3929a5235661b45faeddb704ecaa180.jpg",
-    "artAuthor": "culter",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40459277"
+    "image": "f3929a5235661b45faeddb704ecaa180.jpg",
+    "art": {
+        "author": "culter",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=40459277"
+    },
+    "debut": {
+        "game": "Highly Responsive to Prayers",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Konngara"
 },
 {
     "name": "Rika",
-    "imgurl": "0f2baa9f3a9673bad5ea91a295a6f767.jpg",
-    "artAuthor": "shiz (#0077)",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=56115777"
+    "image": "0f2baa9f3a9673bad5ea91a295a6f767.jpg",
+    "art": {
+        "author": "shiz (#0077)",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=56115777"
+    },
+    "debut": {
+        "game": "Story of Eastern Wonderland",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Rika"
 },
 {
     "name": "Noroiko",
-    "imgurl": "a4abbb005ca25cf21f00afe11997d6f2.jpg",
-    "artAuthor": "rita911",
-    "artUrl": "http://img58.pixiv.net/img/rita911/20783183.jpg"
+    "image": "a4abbb005ca25cf21f00afe11997d6f2.jpg",
+    "art": {
+        "author": "rita911",
+        "url": "http://img58.pixiv.net/img/rita911/20783183.jpg"
+    },
+    "debut": {
+        "game": "Story of Eastern Wonderland",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Noroiko"
 },
 {
     "name": "Meira",
-    "imgurl": "097bcefd4cd4b09fa4b508b30412f6c1.jpg",
-    "artAuthor": "yuxyon",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=46680452"
+    "image": "097bcefd4cd4b09fa4b508b30412f6c1.jpg",
+    "art": {
+        "author": "yuxyon",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=46680452"
+    },
+    "debut": {
+        "game": "Story of Eastern Wonderland",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Meira"
 },
 {
     "name": "Kana Anaberal",
-    "imgurl": "0a41385d7425a2428851a30376ce53dc.jpg",
-    "artAuthor": "culter",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=41955182"
+    "image": "0a41385d7425a2428851a30376ce53dc.jpg",
+    "art": {
+        "author": "culter",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=41955182"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Dim.Dream",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kana_Anaberal"
 },
 {
     "name": "Kotohime",
-    "imgurl": "1f8f012a95f7ab1cac3a0636fab6a586.jpg",
-    "artAuthor": "ayase midori",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=47768817"
+    "image": "1f8f012a95f7ab1cac3a0636fab6a586.jpg",
+    "art": {
+        "author": "ayase midori",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=47768817"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Dim.Dream",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kotohime"
 },
 {
     "name": "Ellen",
-    "imgurl": "351d7f5ce9cb558fb6cd1c2cdafb7eb7.jpg",
-    "artAuthor": "culter",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=47505791"
+    "image": "351d7f5ce9cb558fb6cd1c2cdafb7eb7.jpg",
+    "art": {
+        "author": "culter",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=47505791"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Dim.Dream",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Ellen"
 },
 {
     "name": "Rikako Asakura",
-    "imgurl": "4127f06a33559c280b6c34a18829a96d.jpg",
-    "artAuthor": "hiseki (tknkkm)",
-    "artUrl": "http://img14.pixiv.net/img/tknkkm/21537012.jpg"
+    "image": "4127f06a33559c280b6c34a18829a96d.jpg",
+    "art": {
+        "author": "hiseki (tknkkm)",
+        "url": "http://img14.pixiv.net/img/tknkkm/21537012.jpg"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Dim.Dream",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Rikako_Asakura"
 },
 {
     "name": "Yumemi Okazaki",
-    "imgurl": "a2258d8cf32997dfdd7de435d1a62e63.jpg",
-    "artAuthor": "akizawa aki",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53150214"
+    "image": "a2258d8cf32997dfdd7de435d1a62e63.jpg",
+    "art": {
+        "author": "akizawa aki",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53150214"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Dim.Dream",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yumemi_Okazaki"
 },
 {
     "name": "Chiyuri Kitashirakawa",
-    "imgurl": "d8c0fe82fa82042010b44e087be3d607.jpg",
-    "artAuthor": "ibuki notsu",
-    "artUrl": "http://lohas.nicoseiga.jp/priv/7a0fa9b9819ca2d82119450bb81d626625644aa6/1439287128/5109130"
+    "image": "d8c0fe82fa82042010b44e087be3d607.jpg",
+    "art": {
+        "author": "ibuki notsu",
+        "url": "http://lohas.nicoseiga.jp/priv/7a0fa9b9819ca2d82119450bb81d626625644aa6/1439287128/5109130"
+    },
+    "debut": {
+        "game": "Phantasmagoria of Dim.Dream",
+        "year": "1997"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Chiyuri_Kitashirakawa"
 },
 {
     "name": "Orange",
-    "imgurl": "d1b32228b4c3bb0ca6e51140ebd149f1.png",
-    "artAuthor": "kaoru (gensou yuugen-an)",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=26737730"
+    "image": "d1b32228b4c3bb0ca6e51140ebd149f1.png",
+    "art": {
+        "author": "kaoru (gensou yuugen-an)",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=26737730"
+    },
+    "debut": {
+        "game": "Lotus Land Story",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Orange"
 },
 {
     "name": "Kurumi",
-    "imgurl": "8b909f79ee1cb61a02f34adbf378a27b.jpg",
-    "artAuthor": "aka tawashi",
-    "artUrl": "http://img19.pixiv.net/img/ef641052/22092249.jpg"
+    "image": "8b909f79ee1cb61a02f34adbf378a27b.jpg",
+    "art": {
+        "author": "aka tawashi",
+        "url": "http://img19.pixiv.net/img/ef641052/22092249.jpg"
+    },
+    "debut": {
+        "game": "Lotus Land Story",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Kurumi"
 },
 {
     "name": "Elly",
-    "imgurl": "f3de6ae8cc40eeb7d3544c3015a05586.jpg",
-    "artAuthor": "mr.milk caramel",
-    "artUrl": "http://img02.pixiv.net/img/ufo-0624/23409861.jpg"
+    "image": "f3de6ae8cc40eeb7d3544c3015a05586.jpg",
+    "art": {
+        "author": "mr.milk caramel",
+        "url": "http://img02.pixiv.net/img/ufo-0624/23409861.jpg"
+    },
+    "debut": {
+        "game": "Lotus Land Story",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Elly"
 },
 {
     "name": "Rengeteki",
-    "imgurl": "f9105085193d94f23e88554a8ddbeea8.jpg",
-    "artAuthor": "ellipsis (mitei)",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51344788"
+    "image": "f9105085193d94f23e88554a8ddbeea8.jpg",
+    "art": {
+        "author": "ellipsis (mitei)",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51344788"
+    },
+    "debut": {
+        "game": "Lotus Land Story",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Rengeteki"
 },
 {
     "name": "Mugetsu",
-    "imgurl": "425d5384e1ca5fec52e7a0c4577c6947.jpg",
-    "artAuthor": "razuzyamu",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50872624"
+    "image": "425d5384e1ca5fec52e7a0c4577c6947.jpg",
+    "art": {
+        "author": "razuzyamu",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50872624"
+    },
+    "debut": {
+        "game": "Lotus Land Story",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Mugetsu"
 },
 {
     "name": "Gengetsu",
-    "imgurl": "0a605b97b494d5b03ee9c6731a1cf211.png",
-    "artAuthor": "kan (aaaaari35)",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55721783"
+    "image": "0a605b97b494d5b03ee9c6731a1cf211.png",
+    "art": {
+        "author": "kan (aaaaari35)",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55721783"
+    },
+    "debut": {
+        "game": "Lotus Land Story",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Gengetsu"
 },
 {
     "name": "Sara",
-    "imgurl": "1308ddf9fce937c3ad2ac3049326e855.png",
-    "artAuthor": "akabeko (ku-enn)",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=42796708"
+    "image": "1308ddf9fce937c3ad2ac3049326e855.png",
+    "art": {
+        "author": "akabeko (ku-enn)",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=42796708"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Sara"
 },
 {
     "name": "Louise",
-    "imgurl": "bf028ef3505bae9f79126b1cd5fed069.jpg",
-    "artAuthor": "hemogurobin a1c",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=44502949"
+    "image": "bf028ef3505bae9f79126b1cd5fed069.jpg",
+    "art": {
+        "author": "hemogurobin a1c",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=44502949"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Louise"
 },
 {
     "name": "Yuki",
-    "imgurl": "2964bb1d041e5d29f53578f67e7239ea.jpg",
-    "artAuthor": "senba chidori",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51349785"
+    "image": "2964bb1d041e5d29f53578f67e7239ea.jpg",
+    "art": {
+        "author": "senba chidori",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51349785"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yuki"
 },
 {
     "name": "Ayana",
-    "imgurl": "b131baae5571bee9af1cf537ca159933.jpg",
-    "artAuthor": "aka tawashi",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53190927"
+    "image": "b131baae5571bee9af1cf537ca159933.jpg",
+    "art": {
+        "author": "aka tawashi",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=53190927"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Ayana"
 },
 {
     "name": "Mai",
-    "imgurl": "90a2750221456f0b8e9031a76829b87d.jpg",
-    "artAuthor": "s-syogo",
-    "artUrl": "http://img20.pixiv.net/img/theatelierlatest/19269901_big_p9.jpg"
+    "image": "90a2750221456f0b8e9031a76829b87d.jpg",
+    "art": {
+        "author": "s-syogo",
+        "url": "http://img20.pixiv.net/img/theatelierlatest/19269901_big_p9.jpg"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Mai"
 },
 {
     "name": "Yumeko",
-    "imgurl": "1de18ab75b666596c6e4dbe61f25f225.png",
-    "artAuthor": "dairi",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51638694"
+    "image": "1de18ab75b666596c6e4dbe61f25f225.png",
+    "art": {
+        "author": "dairi",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=51638694"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Yumeko"
 },
 {
     "name": "Shinki",
-    "imgurl": "f4c8f6c0a455b118ec1868113ba52b23.png",
-    "artAuthor": "kan (aaaaari35)",
-    "artUrl": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55625616"
+    "image": "f4c8f6c0a455b118ec1868113ba52b23.png",
+    "art": {
+        "author": "kan (aaaaari35)",
+        "url": "http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55625616"
+    },
+    "debut": {
+        "game": "Mystic Square",
+        "year": "1998"
+    },
+    "wiki": "http://en.touhouwiki.net/wiki/Shinki"
 }
 ]

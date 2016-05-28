@@ -10,7 +10,7 @@ export default class CharacterButtons extends React.Component {
         actions.answerGiven(currentStep);
         actions.setStep(currentStep.step);
 
-        window.setTimeout(() => {
+        setTimeout(() => {
             if (currentStep.step === maxSteps) {
                 actions.openResultsWindow();
             } else {

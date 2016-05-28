@@ -1,11 +1,12 @@
 import _data from '../../../json/characters.json';
+import uniq from 'lodash/uniq';
 
 function randomNumber(scopeLength) {
     return Math.floor(Math.random() * scopeLength);
 }
 
 export function generateNewTest(maxSteps) {
-    const characters = _data.map(char => ({ name: char.name, imgurl: char.imgurl }));
+    const characters = _data.map(char => ({ name: char.name, image: char.image }));
 
     const steps = [];
 
@@ -16,7 +17,7 @@ export function generateNewTest(maxSteps) {
 
         const oneStep = {
             step: st,
-            image: rndCharacter.imgurl,
+            image: rndCharacter.image,
             passed: false,
             buttons: [rndCharacter.name],
             rightAnswer: rndCharacter.name,
@@ -47,4 +48,8 @@ export function generateNewTest(maxSteps) {
 
 export function passedSteps(steps) {
     return steps.filter(step => step.passed === true).length;
+}
+
+export function getAllGames() {
+    return uniq(_data.map(data => (data.debut.game)));
 }

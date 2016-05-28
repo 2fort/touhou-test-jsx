@@ -1,18 +1,5 @@
 import React from 'react';
 
-const Navigation = ({ resetTest }) => (
-    <div className="menu">
-        <nav>
-            <a href={(process.env.NODE_ENV === 'development' ? '/' : '/touhou-test-jsx')}>Touhou-test-jsx</a>
-            <button type="button" className="reload" onClick={resetTest}>↻</button>
-        </nav>
-    </div>
-);
-
-Navigation.propTypes = {
-    resetTest: React.PropTypes.func.isRequired,
-};
-
 const NextButton = ({ steps, activeStep, passedSteps, maxSteps, goNextStep, children }) => {
     let color = 'disabled';
 
@@ -83,7 +70,7 @@ const TopButtons = ({ steps, passedSteps, activeStep }) => {
         color += ((i + 1) === activeStep) ? ' active' : '';
 
         return (
-            <div key={i} className={color} id={`step${i + 1}`}>
+            <div key={i} className={color}>
                 &nbsp;
             </div>
         );
@@ -102,4 +89,4 @@ TopButtons.propTypes = {
     activeStep: React.PropTypes.number.isRequired,
 };
 
-export { NextButton, PrevButton, TopButtons, Navigation };
+export { NextButton, PrevButton, TopButtons };

@@ -1,12 +1,12 @@
 {
   "name": "touhou-test-jsx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "touhou-test",
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0",
     "build": "cd build && ls | xargs rm -rf && cd .. && NODE_ENV=production webpack --config webpack.prod.config.js",
-    "lint": "sass-lint 'src/sass/**/*.scss' -v -q && eslint \"./src/js/**\"; exit 0",
+    "lint": "sass-lint 'src/sass/**/*.scss' -v -q && eslint \"./src/js/**/*\"; exit 0",
     "img": "gulp images"
   },
   "author": "Alexander Kirsanov",
@@ -45,8 +45,10 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "lodash": "^4.13.1",
     "normalize-scss": "^5.0.2",
     "react": "^15.1.0",
+    "react-document-title": "^2.0.1",
     "react-dom": "^15.1.0",
     "react-modal": "^1.3.0",
     "react-redux": "^4.4.5",

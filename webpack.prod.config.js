@@ -56,7 +56,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Touhou-test',
+            title: 'Touhou | Comiket',
             template: './src/my-index.ejs',
             inject: 'body',
         }),
