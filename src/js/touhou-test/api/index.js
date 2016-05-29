@@ -1,5 +1,8 @@
 import _data from '../../../json/characters.json';
-import uniq from 'lodash/uniq';
+import uniqWith from 'lodash/uniqWith';
+import isEqual from 'lodash/isEqual';
+import sortBy from 'lodash/sortBy';
+import cloneDeep from 'lodash/cloneDeep';
 
 function randomNumber(scopeLength) {
     return Math.floor(Math.random() * scopeLength);
@@ -50,6 +53,17 @@ export function passedSteps(steps) {
     return steps.filter(step => step.passed === true).length;
 }
 
+function findCharsByGame(game) {
+    return _data.filter(data => data.debut.game === game).map(obj => obj.name);
+}
+
 export function getAllGames() {
-    return uniq(_data.map(data => (data.debut.game)));
+    const uniqGames = sortBy(uniqWith(_data.map(data => (data.debut)), isEqual), 'year');
+    const uniqGamesWithChars = cloneDeep(uniqGames);
+
+    for (const item of uniqGamesWithChars) {
+        item.characters = findCharsByGame(item.game);
+    }
+
+    return uniqGamesWithChars;
 }

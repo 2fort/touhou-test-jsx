@@ -3,9 +3,10 @@ require('../sass/app.scss');
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import routes from './touhou-test/routes';
+import Router from 'react-router/lib/Router';
+import browserHistory from 'react-router/lib/browserHistory';
 
+import routes from './touhou-test/routes';
 import configureStore from './touhou-test/store/configureStore';
 
 const store = configureStore();

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import DocumentTitle from 'react-document-title';
 
 import * as TestActions from '../actions/testActions';
-
 import CharacterImage from '../components/TouhouTest/CharacterImage';
 import Slider from '../components/TouhouTest/Slider';
 import MyModal from '../components/TouhouTest/MyModal';

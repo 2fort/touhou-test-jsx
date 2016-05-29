@@ -11,6 +11,7 @@ module.exports = {
 
     output: {
         path: './build',
+        publicPath: '/',
         filename: '[hash].bundle.js',
     },
 
@@ -23,12 +24,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css?sourceMap',
+                loaders: ['style', 'resolve-url', 'css?sourceMap'],
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css?sourceMap!' + 'sass?sourceMap',
+                loaders: ['style', 'resolve-url', 'css?sourceMap', 'sass?sourceMap'],
             },
             {
                 test: /\.(js|jsx)$/,
@@ -51,6 +52,10 @@ module.exports = {
                 loader: 'json',
             },
         ],
+    },
+
+    resolveUrlLoader: {
+        silent: true,
     },
 
     plugins: [

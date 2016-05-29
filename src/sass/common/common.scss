@@ -58,24 +58,33 @@ button {
             padding: .75rem .5rem;
             text-decoration: none;
 
-            &:hover, &.active {
-                background-color: rgba(999, 999, 999, .2);
-            }
-
             &:first-child {
                 font-size: 1.1rem;
                 margin-right: auto;
 
                 &:hover {
                     background-color: transparent;
+                    border: 0;
                 }
             }
         }
 
         button {
+            &:hover {
+                background-color: rgba(999, 999, 999, .2);
+            }
+
             &.reload {
                 font-size: 1.75rem;
                 padding: 0 .5rem;
+            }
+        }
+
+        a {
+            &:hover,
+            &.active {
+                border-bottom: 2px darken(#1b98f8, 10%) solid;
+                border-top: 2px transparent solid;
             }
         }
     }
@@ -89,4 +98,14 @@ button {
     margin: 1.25rem auto 0;
     max-width: $container-width;
     padding: 1rem;
+
+    a {
+        box-sizing: border-box;
+        color: darken(#1b98f8, 10%);
+        text-decoration: none;
+
+        &:hover {
+            border-bottom: 1px solid darken(#1b98f8, 10%);
+        }
+    }
 }

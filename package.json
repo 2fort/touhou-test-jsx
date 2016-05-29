@@ -47,6 +47,7 @@
   "dependencies": {
     "lodash": "^4.13.1",
     "normalize-scss": "^5.0.2",
+    "purecss": "^0.6.0",
     "react": "^15.1.0",
     "react-document-title": "^2.0.1",
     "react-dom": "^15.1.0",

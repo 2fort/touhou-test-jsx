@@ -22,12 +22,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css',
+                loaders: ['style', 'resolve-url', 'css'],
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style!' + 'resolve-url!' + 'css!' + 'postcss!' + 'sass?sourceMap',
+                loaders: ['style', 'resolve-url', 'css', 'postcss', 'sass?sourceMap'],
             },
             {
                 test: /\.(js|jsx)$/,

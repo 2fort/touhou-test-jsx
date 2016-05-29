@@ -72,6 +72,18 @@
                 }
             }
         }
+
+        .blue {
+            &:hover {
+                background-color: darken($blue, 7%);
+            }
+
+            &.disabled {
+                &:hover {
+                    background-color: $blue;
+                }
+            }
+        }
     }
 
     .navigation {
