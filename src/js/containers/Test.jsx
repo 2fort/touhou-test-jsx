@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import DocumentTitle from 'react-document-title';
 
 import * as TestActions from '../actions/testActions';
-import CharacterImage from '../components/TouhouTest/CharacterImage';
-import Slider from '../components/TouhouTest/Slider';
-import MyModal from '../components/TouhouTest/MyModal';
-import CharacterButtons from '../components/TouhouTest/CharacterButtons';
-import { NextButton, PrevButton, TopButtons } from '../components/TouhouTest/other';
+import CharacterImage from '../components/Test/CharacterImage';
+import Slider from '../components/Test/Slider';
+import MyModal from '../components/Test/MyModal';
+import CharacterButtons from '../components/Test/CharacterButtons';
+import { NextButton, PrevButton, TopButtons } from '../components/Test/other';
 
-class TouhouTest extends Component {
+class Test extends Component {
     componentWillMount() {
         this.props.actions.showResetButton();
 
@@ -83,7 +83,7 @@ class TouhouTest extends Component {
         ); }
 }
 
-TouhouTest.propTypes = {
+Test.propTypes = {
     steps: PropTypes.array,
     maxSteps: PropTypes.number,
     activeStep: PropTypes.number,
@@ -113,4 +113,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(TouhouTest);
+)(Test);

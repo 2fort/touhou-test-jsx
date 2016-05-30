@@ -1,15 +1,13 @@
-import _data from '../../../json/characters.json';
-import uniqWith from 'lodash/uniqWith';
-import isEqual from 'lodash/isEqual';
-import sortBy from 'lodash/sortBy';
-import cloneDeep from 'lodash/cloneDeep';
+import _characters from '../../json/characters.json';
+import _games from '../../json/games.json';
+import snakeCase from 'lodash/snakeCase';
 
 function randomNumber(scopeLength) {
     return Math.floor(Math.random() * scopeLength);
 }
 
 export function generateNewTest(maxSteps) {
-    const characters = _data.map(char => ({ name: char.name, image: char.image }));
+    const characters = _characters.map(char => ({ name: char.name, image: char.image }));
 
     const steps = [];
 
@@ -49,21 +47,18 @@ export function generateNewTest(maxSteps) {
     return steps;
 }
 
-export function passedSteps(steps) {
-    return steps.filter(step => step.passed === true).length;
-}
-
-function findCharsByGame(game) {
-    return _data.filter(data => data.debut.game === game).map(obj => obj.name);
+export function getSingleCharInfo(charName) {
+    return _characters.filter(char => snakeCase(char.name) === charName)[0];
 }
 
 export function getAllGames() {
-    const uniqGames = sortBy(uniqWith(_data.map(data => (data.debut)), isEqual), 'year');
-    const uniqGamesWithChars = cloneDeep(uniqGames);
+    return _games;
+}
 
-    for (const item of uniqGamesWithChars) {
-        item.characters = findCharsByGame(item.game);
-    }
+export function getAllCharsFromGame(gameTitle) {
+    return _characters.filter(data => snakeCase(data.game) === gameTitle);
+}
 
-    return uniqGamesWithChars;
+export function getProperGameTitle(gameTitle) {
+    return _games.filter(game => snakeCase(game.title) === gameTitle)[0].title;
 }

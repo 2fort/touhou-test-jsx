@@ -41,7 +41,7 @@ Navigation.propTypes = {
 };
 
 
-const Layout = ({ resetButtonVisible, children, actions }) => (
+const Index = ({ resetButtonVisible, children, actions }) => (
     <div>
         <Navigation resetButtonVisible={resetButtonVisible} resetTest={actions.resetTest} />
         <DocumentTitle title="Touhou | Comiket">
@@ -50,7 +50,7 @@ const Layout = ({ resetButtonVisible, children, actions }) => (
     </div>
 );
 
-Layout.propTypes = {
+Index.propTypes = {
     children: PropTypes.node,
     resetButtonVisible: PropTypes.bool.isRequired,
     actions: PropTypes.object.isRequired,
@@ -71,6 +71,6 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Layout);
+)(Index);
 
 // export default Layout;
