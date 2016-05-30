@@ -62,3 +62,7 @@ export function getAllCharsFromGame(gameTitle) {
 export function getProperGameTitle(gameTitle) {
     return _games.filter(game => snakeCase(game.title) === gameTitle)[0].title;
 }
+
+export function getProperCharName(charName) {
+    return _characters.filter(char => snakeCase(char.name) === charName)[0].name;
+}
