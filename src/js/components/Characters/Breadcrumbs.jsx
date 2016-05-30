@@ -2,29 +2,29 @@ import React, { PropTypes } from 'react';
 import Link from 'react-router/lib/Link';
 import * as testApi from '../../api';
 
-const Breadcrumbs = ({ params }) => {
-    if (!params.game) {
-        return null
-    } else if (params.game && !params.char) {
+const Breadcrumbs = ({ game, char }) => {
+    if (!game) {
+        return null;
+    } else if (game && !char) {
         return (
             <div className="breadcrumbs">
-                <Link to='characters'>Characters</Link> > {testApi.getProperGameTitle(params.game)}
+                <Link to="/characters">Characters</Link>&nbsp;/&nbsp;{testApi.getProperGameTitle(game)}
             </div>
-        )
-    } else {
-        return (
-            <div className="breadcrumbs">
-                <Link to='characters'>Characters</Link>&nbsp;&gt;&nbsp;
-                <Link to={`/characters/${params.game}`}>
-                    {testApi.getProperGameTitle(params.game)}
-                </Link>&nbsp;&gt;&nbsp;{testApi.getProperCharName(params.char)}
-            </div>
-        )
+        );
     }
-}
+    return (
+        <div className="breadcrumbs">
+            <Link to="/characters">Characters</Link>&nbsp;/&nbsp;
+            <Link to={`/characters/${game}`}>
+                {testApi.getProperGameTitle(game)}
+            </Link>
+        </div>
+    );
+};
 
-Breadcrumbs.PropTypes = {
-    params: PropTypes.object,
-}
+Breadcrumbs.propTypes = {
+    game: PropTypes.string,
+    char: PropTypes.string,
+};
 
 export default Breadcrumbs;
