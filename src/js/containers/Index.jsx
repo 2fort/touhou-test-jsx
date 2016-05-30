@@ -28,7 +28,7 @@ const Navigation = ({ resetButtonVisible, resetTest }) => {
                   Touhou @ Comiket
                 </Link>
                 {reloadButton}
-                <Link to="/test" activeClassName="active">Test x20</Link>
+                <Link to="/test" activeClassName="active">Test</Link>
                 <Link to="/characters" activeClassName="active">Characters</Link>
             </nav>
         </div>
@@ -72,5 +72,3 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(Index);
-
-// export default Layout;

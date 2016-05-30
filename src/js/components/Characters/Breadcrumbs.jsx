@@ -7,13 +7,13 @@ const Breadcrumbs = ({ params }) => {
         return null
     } else if (params.game && !params.char) {
         return (
-            <div>
+            <div className="breadcrumbs">
                 <Link to='characters'>Characters</Link> > {testApi.getProperGameTitle(params.game)}
             </div>
         )
     } else {
         return (
-            <div>
+            <div className="breadcrumbs">
                 <Link to='characters'>Characters</Link>&nbsp;&gt;&nbsp;
                 <Link to={`/characters/${params.game}`}>
                     {testApi.getProperGameTitle(params.game)}

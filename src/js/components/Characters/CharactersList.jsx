@@ -27,8 +27,6 @@ const CharactersList = ({ location, params }) => {
     );
 };
 
-// TODO: create /about page and hamburger button
-
 CharactersList.propTypes = {
     params: PropTypes.object,
     location: PropTypes.object,

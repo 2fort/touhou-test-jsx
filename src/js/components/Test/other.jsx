@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const NextButton = ({ steps, activeStep, passedSteps, maxSteps, goNextStep, children }) => {
     let color = 'disabled';
@@ -23,12 +23,12 @@ const NextButton = ({ steps, activeStep, passedSteps, maxSteps, goNextStep, chil
 };
 
 NextButton.propTypes = {
-    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    activeStep: React.PropTypes.number.isRequired,
-    passedSteps: React.PropTypes.number.isRequired,
-    maxSteps: React.PropTypes.number.isRequired,
-    goNextStep: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node,
+    steps: PropTypes.arrayOf(PropTypes.object).isRequired,
+    activeStep: PropTypes.number.isRequired,
+    passedSteps: PropTypes.number.isRequired,
+    maxSteps: PropTypes.number.isRequired,
+    goNextStep: PropTypes.func.isRequired,
+    children: PropTypes.node,
 };
 
 const PrevButton = ({ steps, activeStep, goPrevStep, children }) => {
@@ -49,10 +49,10 @@ const PrevButton = ({ steps, activeStep, goPrevStep, children }) => {
 };
 
 PrevButton.propTypes = {
-    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    activeStep: React.PropTypes.number.isRequired,
-    goPrevStep: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node.isRequired,
+    steps: PropTypes.arrayOf(PropTypes.object).isRequired,
+    activeStep: PropTypes.number.isRequired,
+    goPrevStep: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 const TopButtons = ({ steps, passedSteps, activeStep }) => {
@@ -84,9 +84,9 @@ const TopButtons = ({ steps, passedSteps, activeStep }) => {
 };
 
 TopButtons.propTypes = {
-    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    passedSteps: React.PropTypes.number.isRequired,
-    activeStep: React.PropTypes.number.isRequired,
+    steps: PropTypes.arrayOf(PropTypes.object).isRequired,
+    passedSteps: PropTypes.number.isRequired,
+    activeStep: PropTypes.number.isRequired,
 };
 
 export { NextButton, PrevButton, TopButtons };

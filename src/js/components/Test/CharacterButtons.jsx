@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class CharacterButtons extends React.Component {
+export default class CharacterButtons extends Component {
     handleAnswer(answerChar) {
         const { actions, currentStep, maxSteps } = this.props;
 
@@ -56,14 +56,14 @@ export default class CharacterButtons extends React.Component {
 }
 
 CharacterButtons.propTypes = {
-    currentStep: React.PropTypes.shape({
-        step: React.PropTypes.number.isRequired,
-        image: React.PropTypes.string.isRequired,
-        passed: React.PropTypes.bool.isRequired,
-        buttons: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-        rightAnswer: React.PropTypes.string.isRequired,
-        givenAnswer: React.PropTypes.string.isRequired,
+    currentStep: PropTypes.shape({
+        step: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired,
+        passed: PropTypes.bool.isRequired,
+        buttons: PropTypes.arrayOf(PropTypes.string).isRequired,
+        rightAnswer: PropTypes.string.isRequired,
+        givenAnswer: PropTypes.string.isRequired,
     }).isRequired,
-    actions: React.PropTypes.object.isRequired,
-    maxSteps: React.PropTypes.number.isRequired,
+    actions: PropTypes.object.isRequired,
+    maxSteps: PropTypes.number.isRequired,
 };

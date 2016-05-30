@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class Slider extends React.Component {
+export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = { value: props.step };
@@ -35,8 +35,8 @@ export default class Slider extends React.Component {
 }
 
 Slider.propTypes = {
-    step: React.PropTypes.number.isRequired,
-    passedSteps: React.PropTypes.number.isRequired,
-    maxSteps: React.PropTypes.number.isRequired,
-    setStep: React.PropTypes.func.isRequired,
+    step: PropTypes.number.isRequired,
+    passedSteps: PropTypes.number.isRequired,
+    maxSteps: PropTypes.number.isRequired,
+    setStep: PropTypes.func.isRequired,
 };

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class CharacterImage extends React.Component {
+export default class CharacterImage extends Component {
     shouldComponentUpdate(nextProps) {
         if (nextProps.image !== this.props.image) {
             return true;
@@ -18,5 +18,5 @@ export default class CharacterImage extends React.Component {
 }
 
 CharacterImage.propTypes = {
-    image: React.PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
 };

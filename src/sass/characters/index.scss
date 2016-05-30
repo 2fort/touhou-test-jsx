@@ -26,6 +26,12 @@
             border: 0;
         }
     }
+
+    @media only screen and (max-width: 580px) {
+        & {
+            margin: .5rem 0.4rem;
+        }
+    }
 }
 
 .singlechar {
@@ -57,4 +63,8 @@
             }
         }
     }
+}
+
+.breadcrumbs {
+    margin-bottom: 1rem;
 }

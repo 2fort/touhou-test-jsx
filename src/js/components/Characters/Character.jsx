@@ -14,8 +14,8 @@ const Character = ({ params }) => {
                         <img alt="char" src={require(`../../../images/scale/${charInfo.image}`)} />
                     </div>
                     <div>
+                        <p>Character info: <a href={charInfo.wiki}>touhouwiki.net</a></p>
                         <p>Illustration author: <a href={charInfo.art.url}> {charInfo.art.author}</a></p>
-                        <p>Character info: <a href={charInfo.wiki}>touhouwiki</a></p>
                     </div>
                 </div>
             </div>

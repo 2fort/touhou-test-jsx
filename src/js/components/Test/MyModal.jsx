@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import Modal from 'react-modal';
 
-export default class MyModal extends React.Component {
+export default class MyModal extends Component {
     shouldComponentUpdate(nextProps) {
         if (nextProps.open !== this.props.open) {
             return true;
@@ -44,7 +44,7 @@ export default class MyModal extends React.Component {
 }
 
 MyModal.propTypes = {
-    open: React.PropTypes.bool.isRequired,
-    steps: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    actions: React.PropTypes.object.isRequired,
+    open: PropTypes.bool.isRequired,
+    steps: PropTypes.arrayOf(PropTypes.object).isRequired,
+    actions: PropTypes.object.isRequired,
 };

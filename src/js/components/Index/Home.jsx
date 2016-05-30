@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link, browserHistory } from 'react-router';
 
 const Home = () => (
@@ -11,7 +11,7 @@ const Home = () => (
 );
 
 Home.contextTypes = {
-    router: React.PropTypes.object.isRequired,
+    router: PropTypes.object.isRequired,
 };
 
 export default Home;
