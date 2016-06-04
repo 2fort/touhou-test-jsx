@@ -1,4 +1,14 @@
-/.vscode
-/src/images
+/src/images/games/*
+/src/images/l/*
+/src/images/m/*
+/src/images/s/*
+/src/images/temp/*
+
+!/src/images/games/.gitkeep
+!/src/images/l/.gitkeep
+!/src/images/m/.gitkeep
+!/src/images/s/.gitkeep
+!/src/images/temp/.gitkeep
+
 /node_modules
 TODO

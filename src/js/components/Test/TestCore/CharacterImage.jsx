@@ -8,7 +8,7 @@ export default class CharacterImage extends Component {
         return false;
     }
     render() {
-        let img = require(`../../../../images/scale/${this.props.image}`);
+        let img = require(`../../../../images/m/${this.props.image}`);
         return (
             <div className="character-image">
                 <img key={img} alt="character" src={img} />

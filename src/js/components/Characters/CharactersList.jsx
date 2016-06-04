@@ -10,7 +10,7 @@ const CharactersList = ({ location, params }) => {
         <div key={char.name} className="flex-item">
             <p>
                 <Link className="imagelink" to={`${location.pathname}/${_.snakeCase(char.name)}`}>
-                    <img alt="char" src={require(`../../../images/scale/${char.image}`)} />
+                    <img alt="char" src={require(`../../../images/s/${char.image}`)} />
                 </Link>
             </p>
             <p>
