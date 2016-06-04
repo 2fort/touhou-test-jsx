@@ -9,6 +9,7 @@ import Characters from './containers/Characters';
 import GamesList from './components/Characters/GamesList';
 import CharactersList from './components/Characters/CharactersList';
 import Character from './components/Characters/Character';
+import Route404 from './components/404';
 
 module.exports = (
     <Route path="/" component={Index}>
@@ -19,5 +20,6 @@ module.exports = (
             <Route path=":game" component={CharactersList} />
             <Route path=":game/:char" component={Character} />
         </Route>
+        <Route path='*' component={Route404} />
     </Route>
 );
