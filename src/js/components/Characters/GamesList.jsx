@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Link from 'react-router/lib/Link';
-import snakeCase from 'lodash/snakeCase';
+import _ from 'lodash';
 import DocumentTitle from 'react-document-title';
 
 import * as testApi from '../../api';
@@ -9,12 +9,12 @@ const GamesList = ({ location }) => {
     const gamesFlex = testApi.getAllGames().map(game => (
         <div key={game.title} className="flex-item">
             <p>
-                <Link className="imagelink" to={`${location.pathname}/${snakeCase(game.title)}`}>
+                <Link className="imagelink" to={`${location.pathname}/${_.snakeCase(game.title)}`}>
                     <img alt="char" src={require(`../../../images/games/${game.cover}`)} />
                 </Link>
             </p>
             <p>
-                <Link to={`${location.pathname}/${snakeCase(game.title)}`}>{game.title}</Link>
+                <Link to={`${location.pathname}/${_.snakeCase(game.title)}`}>{game.title}</Link>
             </p>
             <p>{game.year}</p>
         </div>

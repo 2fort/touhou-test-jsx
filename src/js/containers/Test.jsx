@@ -29,7 +29,7 @@ class Test extends Component {
         }
 
         return (
-            <DocumentTitle title="Test x20 | Touhou">
+            <DocumentTitle title="Test | Touhou">
                 <div>
                     <Slider
                       setStep={actions.setStep}

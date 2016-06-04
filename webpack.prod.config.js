@@ -35,7 +35,7 @@ module.exports = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.(svg|ttf|woff|woff2|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(svg|ttf|woff|woff2|eot)$/,
                 exclude: /node_modules/,
                 loader: 'url',
             },

@@ -78,10 +78,6 @@
                 background-color: darken($blue, 7%);
             }
 
-            &:focus {
-                background-color: $blue;
-            }
-
             &.disabled {
                 &:hover {
                     background-color: $blue;
