@@ -11,4 +11,5 @@
 !/src/images/temp/.gitkeep
 
 /node_modules
+/build
 TODO

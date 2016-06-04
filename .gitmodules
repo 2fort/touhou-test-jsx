@@ -1,4 +1,0 @@
-[submodule "build"]
-	path = build
-	url = git@github.com:2fort/touhou-test-jsx.git
-	branch = gh-pages
