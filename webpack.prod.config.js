@@ -10,6 +10,7 @@ module.exports = {
 
     output: {
         path: './build',
+        publicPath: '/',
         filename: '[hash].bundle.js',
     },
 
@@ -42,7 +43,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg)$/,
                 exclude: /node_modules/,
-                loader: 'url?limit=40000&name=img/[hash].[ext]',
+                loader: 'url?limit=5000&name=img/[hash].[ext]',
             },
             {
                 test: /\.json$/,

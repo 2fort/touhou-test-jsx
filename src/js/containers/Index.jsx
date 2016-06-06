@@ -22,9 +22,7 @@ const Navigation = ({ resetButtonVisible, resetTest }) => {
     return (
         <div className="menu">
             <nav>
-                <Link
-                  to={(process.env.NODE_ENV === 'development' ? '/' : '/touhou-test-jsx')}
-                >
+                <Link to="/">
                   Touhou @ Comiket
                 </Link>
                 {reloadButton}

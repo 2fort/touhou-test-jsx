@@ -44,7 +44,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg)$/,
                 exclude: /node_modules/,
-                loader: 'url?limit=40000&name=img/[hash].[ext]',
+                loader: 'url?limit=5000&name=img/[hash].[ext]',
             },
             {
                 test: /\.json$/,
