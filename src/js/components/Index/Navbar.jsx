@@ -1,8 +1,29 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import Link from 'react-router/lib/Link';
 
-const Navbar = ({ resetButtonVisible, resetTest }) => {
-    let reloadButton =
+const NavLink = (props) => <Link activeClassName="active" {...props} />;
+
+class Navbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { expanded: false };
+        this.triggerMenu = this.triggerMenu.bind(this);
+        this.hideMenu = this.hideMenu.bind(this);
+    }
+
+    triggerMenu() {
+        this.setState({ expanded: !this.state.expanded });
+    }
+
+    hideMenu() {
+        this.setState({ expanded: false });
+    }
+
+    render() {
+        const { resetButtonVisible, resetTest } = this.props;
+
+        let reloadButton =
         (resetButtonVisible) ?
             <button
               type="button"
@@ -13,21 +34,29 @@ const Navbar = ({ resetButtonVisible, resetTest }) => {
               ↻
             </button> : null;
 
-    return (
-        <div className="menu">
-            <nav>
-                <Link to="/">Touhou @ Comiket</Link>
+        const inButton = this.state.expanded ? ' show' : ' hide';
 
-                {reloadButton}
-                <Link to="/test" activeClassName="active">Test</Link>
-                <Link to="/characters" activeClassName="active">Characters</Link>
-                <a className="git" href="https://github.com/2fort/touhou-test-jsx">
-                    <i className="fa fa-github fa-fw fa-lg" aria-hidden="true"></i> Github
-                </a>
-            </nav>
-        </div>
-    );
-};
+        return (
+            <div className="menu">
+                <nav>
+                    <Link onClick={this.hideMenu} className="logo" to="/">Touhou @ Comiket</Link>
+                    {reloadButton}
+                    <button type="button" className="burger" onClick={this.triggerMenu}>
+                        <i className="fa fa-bars fa-lg" aria-hidden="true"></i>
+                    </button>
+
+                    <div className={`collapsible${inButton}`}>
+                        <NavLink onClick={this.hideMenu} to="test" >Test</NavLink>
+                        <NavLink onClick={this.hideMenu} to="characters">Characters</NavLink>
+                        <a href="https://github.com/2fort/touhou-test-jsx">
+                            <i className="fa fa-github fa-fw fa-lg" aria-hidden="true"></i> Github
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        );
+    }
+}
 
 Navbar.propTypes = {
     resetButtonVisible: PropTypes.bool.isRequired,
