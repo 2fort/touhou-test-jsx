@@ -1,47 +1,14 @@
 import React, { PropTypes } from 'react';
-import Link from 'react-router/lib/Link';
 import DocumentTitle from 'react-document-title';
-
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import Navbar from '../components/Index/Navbar';
 import * as TestActions from '../actions/testActions';
-
-const Navigation = ({ resetButtonVisible, resetTest }) => {
-    let reloadButton =
-        (resetButtonVisible) ?
-            <button
-              type="button"
-              className="reload"
-              title="Reset"
-              onClick={resetTest}
-            >
-              ↻
-            </button> : null;
-
-    return (
-        <div className="menu">
-            <nav>
-                <Link to="/">
-                  Touhou @ Comiket
-                </Link>
-                {reloadButton}
-                <Link to="/test" activeClassName="active">Test</Link>
-                <Link to="/characters" activeClassName="active">Characters</Link>
-            </nav>
-        </div>
-    );
-};
-
-Navigation.propTypes = {
-    resetButtonVisible: PropTypes.bool.isRequired,
-    resetTest: PropTypes.func.isRequired,
-};
-
 
 const Index = ({ resetButtonVisible, children, actions }) => (
     <div>
-        <Navigation resetButtonVisible={resetButtonVisible} resetTest={actions.resetTest} />
+        <Navbar resetButtonVisible={resetButtonVisible} resetTest={actions.resetTest} />
         <DocumentTitle title="Touhou | Comiket">
             {children}
         </DocumentTitle>

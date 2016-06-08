@@ -12,8 +12,7 @@
 }
 
 .flex-item {
-    flex-grow: 1;
-    flex-basis: 150px;
+    flex: 1 0 150px;
     margin: .5rem 1rem;
 
     img {
