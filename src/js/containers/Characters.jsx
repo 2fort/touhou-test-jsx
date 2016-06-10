@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
+
 import Breadcrumbs from '../components/Characters/Breadcrumbs';
 import ModeButtons from '../components/Characters/ModeButtons';
 

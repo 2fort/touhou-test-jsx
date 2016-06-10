@@ -1,7 +1,8 @@
 import * as types from '../constants/ActionTypes';
 
-export function showAllGames() {
+export function changeMode(mode) {
     return {
-        type: types.SHOW_ALL_GAMES,
+        type: types.CHANGE_MODE,
+        mode,
     };
 }

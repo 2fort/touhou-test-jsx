@@ -20,4 +20,4 @@ export const HIDE_RESET_BUTTON = 'HIDE_RESET_BUTTON';
 
 // characters actions
 
-export const SHOW_ALL_GAMES = 'SHOW_ALL_GAMES';
+export const CHANGE_MODE = 'CHANGE_MODE';

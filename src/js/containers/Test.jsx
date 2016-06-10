@@ -58,7 +58,8 @@ class Test extends Component {
                     />
                 </div>
             </DocumentTitle>
-        ); }
+        );
+    }
 }
 
 Test.propTypes = {
