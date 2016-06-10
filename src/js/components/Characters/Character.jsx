@@ -3,8 +3,8 @@ import DocumentTitle from 'react-document-title';
 
 import * as testApi from '../../api';
 
-const Character = ({ params }) => {
-    const charInfo = testApi.getSingleCharInfo(params.char);
+const Character = ({ params: { char } }) => {
+    const charInfo = testApi.getSingleCharInfo(char);
     return (
         <DocumentTitle title={`${charInfo.name} | Touhou`}>
             <div className="singlechar">
@@ -14,7 +14,7 @@ const Character = ({ params }) => {
                         <img alt="char" src={require(`../../../images/m/${charInfo.image}`)} />
                     </div>
                     <div>
-                        <p>Character info: <a href={charInfo.wiki}>touhouwiki.net</a></p>
+                        <p>Character info: <a href={charInfo.wiki}>{charInfo.wiki.substring(7)}</a></p>
                         <p>Illustration author: <a href={charInfo.art.url}> {charInfo.art.author}</a></p>
                     </div>
                 </div>

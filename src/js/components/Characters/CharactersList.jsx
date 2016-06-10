@@ -5,21 +5,21 @@ import DocumentTitle from 'react-document-title';
 
 import * as testApi from '../../api';
 
-const CharactersList = ({ location, params }) => {
-    const charsFlex = testApi.getAllCharsFromGame(params.game).map(char => (
+const CharactersList = ({ location: { pathname }, params: { game } }) => {
+    const charsFlex = testApi.getAllCharsFromGame(game).map(char => (
         <div key={char.name} className="flex-item">
             <p>
-                <Link className="imagelink" to={`${location.pathname}/${_.snakeCase(char.name)}`}>
+                <Link className="imagelink" to={`${pathname}/${_.snakeCase(char.name)}`}>
                     <img alt="char" src={require(`../../../images/s/${char.image}`)} />
                 </Link>
             </p>
             <p>
-                <Link to={`${location.pathname}/${_.snakeCase(char.name)}`}>{char.name}</Link>
+                <Link to={`${pathname}/${_.snakeCase(char.name)}`}>{char.name}</Link>
             </p>
         </div>
     ));
     return (
-        <DocumentTitle title={`${testApi.getProperGameTitle(params.game)} | Touhou`}>
+        <DocumentTitle title={`${testApi.getProperGameTitle(game)} | Touhou`}>
             <div className="flex-container">
                 {charsFlex}
             </div>

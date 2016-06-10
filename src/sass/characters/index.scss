@@ -1,9 +1,11 @@
+@import '~purecss/build/tables-min';
+
 .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    text-align: center;
+    
 
     p {
         padding: 0;
@@ -14,16 +16,11 @@
 .flex-item {
     flex: 1 0 150px;
     margin: .5rem 1rem;
+    text-align: center;
 
     img {
         max-width: 150px;
         max-height: 150px;
-    }
-
-    .imagelink {
-        &:hover {
-            border: 0;
-        }
     }
 
     @media only screen and (max-width: 580px) {
@@ -64,6 +61,17 @@
     }
 }
 
-.breadcrumbs {
+.flex-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: .5rem;
+}
+
+.td-centered {
+    text-align: center;
+}
+
+table {
+    width: 100%;
 }

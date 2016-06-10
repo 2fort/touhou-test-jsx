@@ -43,16 +43,22 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
 
+        @media only screen and (max-width: 750px) {
+            & {
+                flex: 9 0 100%;
+            }
+        }
+
         &.show {
             display: flex;
 
             a {
-                width: 100%;
+                flex: 1 0 90%;
             }
         }
 
         &.hide {
-            @media only screen and (max-width: 550px) {
+            @media only screen and (max-width: 750px) {
                 & {
                     display: none;
                 }
@@ -104,7 +110,7 @@ button {
             }
 
             &.burger {
-                @media only screen and (min-width: 500px) {
+                @media only screen and (min-width: 750px) {
                     & {
                         display: none;
                     }
@@ -137,6 +143,12 @@ button {
 
         &:hover {
             border-bottom: 1px solid darken(#1b98f8, 10%);
+        }
+
+        &.imagelink {
+            &:hover {
+                border: 0;
+            }
         }
     }
 }
