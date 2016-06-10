@@ -11,6 +11,15 @@ class List extends Component {
             changeMode('table');
         }
     }
+    componentWillReceiveProps(nextProps) {
+        const { location: { pathname }, mode } = this.props;
+        const { location: { query } } = nextProps;
+        const { router: { replace } } = this.context;
+
+        if (mode === 'table' && !query.mode && nextProps.mode !== 'grid') {
+            replace({ pathname, query: { mode: 'table' }, state: {} });
+        }
+    }
     check() {
         const { location: { query }, mode } = this.props;
         let result = true;

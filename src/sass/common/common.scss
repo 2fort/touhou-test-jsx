@@ -135,6 +135,7 @@ button {
     margin: 1.25rem auto 0;
     max-width: $container-width;
     padding: 1rem;
+    overflow: hidden;
 
     a {
         box-sizing: border-box;
