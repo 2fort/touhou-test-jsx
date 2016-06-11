@@ -5,7 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    
+    overflow-x: auto;
 
     p {
         padding: 0;
@@ -64,8 +64,13 @@
 .flex-top {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: .5rem;
+}
+
+.modebuttons {
+    text-align: right;
 }
 
 .td-centered {

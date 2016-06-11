@@ -23,16 +23,12 @@ class Navbar extends Component {
     render() {
         const { resetButtonVisible, resetTest } = this.props;
 
-        let reloadButton =
-        (resetButtonVisible) ?
-            <button
-              type="button"
-              className="reload"
-              title="Reset"
-              onClick={resetTest}
-            >
-              ↻
-            </button> : null;
+        let reloadButton = (resetButtonVisible)
+            ? <button type="button" className="reload" title="Reset" onClick={resetTest}>
+                <i className="fa fa-fw fa-lg fa-refresh" aria-hidden="true"></i>
+                <span className="mobile-hide"> Reset</span>
+            </button>
+            : null;
 
         const inButton = this.state.expanded ? ' show' : ' hide';
 

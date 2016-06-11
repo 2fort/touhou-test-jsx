@@ -1,6 +1,6 @@
 # Touhou-test-jsx
 
-Source code for simple project about Touhou characters.
+Source code for project about Touhou characters, located at [touhou.comiket.ru](http://touhou.comiket.ru).
 
 Built with React + react-router + redux.
 

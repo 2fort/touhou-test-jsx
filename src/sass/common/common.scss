@@ -32,6 +32,14 @@ button {
     cursor: default;
 }
 
+.mobile-hide {
+    @media only screen and (max-width: 740px) {
+        & {
+            display: none;
+        }
+    }
+}
+
 .menu {
     background-color: #222;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .14),
@@ -103,8 +111,6 @@ button {
             }
 
             &.reload {
-                font-size: 1.75rem;
-                padding: 0 .5rem;
                 margin-right: auto;
                 margin-left: 0;
             }

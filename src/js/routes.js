@@ -6,8 +6,8 @@ import Index from './containers/Index';
 import Home from './components/Index/Home';
 import Test from './containers/Test';
 import Characters from './containers/Characters';
-import GamesList from './components/Characters/GamesList';
-import CharactersList from './components/Characters/CharactersList';
+import GamesList from './containers/Characters/GamesList';
+import CharactersList from './containers/Characters/CharactersList';
 import Character from './components/Characters/Character';
 import Route404 from './components/404';
 

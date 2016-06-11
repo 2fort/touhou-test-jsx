@@ -4,7 +4,7 @@ import * as testApi from '../../api';
 
 const Breadcrumbs = ({ game, char }) => {
     if (!game) {
-        return <div className="breadcrumbs">&nbsp;</div>;
+        return <div className="breadcrumbs">Characters</div>;
     } else if (game && !char) {
         return (
             <div className="breadcrumbs">
