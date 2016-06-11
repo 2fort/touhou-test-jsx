@@ -23,7 +23,8 @@
         border-radius: 3px;
         color: rgba(255, 255, 255, .87);
         margin-top: 1rem;
-        padding: .35rem .55rem;
+        padding: .5rem 1rem;
+        font-size: .9rem;
 
         &.green {
             background-color: darken($green, 5%);
@@ -31,6 +32,7 @@
 
         &.btn-left {
             float: left;
+            margin-right: 1rem;
         }
 
         &.btn-right {

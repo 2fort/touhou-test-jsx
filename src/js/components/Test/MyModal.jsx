@@ -32,11 +32,13 @@ export default class MyModal extends Component {
         return (
             <Modal isOpen={open} style={customStyles} onRequestClose={actions.closeResultsWindow} >
                 <div className="my-modal">
-                    <h2>Результаты:</h2>
-                    <span className="correct">правильных ответов: {correctAnswers}</span> <br />
-                    <span className="incorrect">неправильных ответов: {incorrectAnswers}</span> <br />
-                    <button className="green btn-left" onClick={actions.resetTest}>Еще раз!</button>
-                    <button className="blue btn-right" onClick={actions.closeResultsWindow}>Закрыть</button>
+                    <h2>Results:</h2>
+                    <span className="correct">right answers: {correctAnswers}</span> <br />
+                    <span className="incorrect">wrong answers: {incorrectAnswers}</span> <br />
+                    <button className="blue btn-left" onClick={actions.resetTest}>
+                        <i className="fa fa-fw fa-lg fa-refresh" aria-hidden="true"></i> Reset
+                    </button>
+                    <button className="green btn-right" onClick={actions.closeResultsWindow}>Close</button>
                 </div>
             </Modal>
         );
