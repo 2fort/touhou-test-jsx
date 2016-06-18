@@ -42,7 +42,7 @@ class Navbar extends Component {
                     </button>
 
                     <div className={`collapsible${inButton}`}>
-                        <NavLink onClick={this.hideMenu} to="/test" >Test</NavLink>
+                        <NavLink onClick={this.hideMenu} to="/test">Test</NavLink>
                         <NavLink onClick={this.hideMenu} to="/characters">Characters</NavLink>
                         <a href="https://github.com/2fort/touhou-test-jsx">
                             <i className="fa fa-github fa-fw fa-lg" aria-hidden="true"></i> Github

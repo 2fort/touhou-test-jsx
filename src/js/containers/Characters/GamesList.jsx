@@ -42,10 +42,8 @@ GamesList.contextTypes = {
     router: PropTypes.object.isRequired,
 };
 
-function mapStateToProps(state) {
-    return {
-        mode: state.characters.mode,
-    };
+function mapStateToProps({ characters: { mode } }) {
+    return { mode };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -54,7 +52,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(GamesList);
+export default connect(mapStateToProps, mapDispatchToProps)(GamesList);

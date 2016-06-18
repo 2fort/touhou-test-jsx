@@ -4,7 +4,7 @@ const initialState = {
     mode: 'grid',
 };
 
-export default function test(state = initialState, action) {
+export default function characters(state = initialState, action) {
     switch (action.type) {
         case types.CHANGE_MODE: {
             return {

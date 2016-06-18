@@ -21,10 +21,8 @@ Index.propTypes = {
     actions: PropTypes.object.isRequired,
 };
 
-function mapStateToProps(state) {
-    return {
-        resetButtonVisible: state.test.resetButtonVisible,
-    };
+function mapStateToProps({ test: { resetButtonVisible } }) {
+    return { resetButtonVisible };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -33,7 +31,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Index);
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

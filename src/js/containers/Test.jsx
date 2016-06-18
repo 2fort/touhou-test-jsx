@@ -22,9 +22,9 @@ class Test extends Component {
         this.props.actions.hideResetButton();
     }
     render() {
-        let { steps, maxSteps, activeStep, passedSteps, modalIsOpen, actions } = this.props;
+        const { steps, maxSteps, activeStep, passedSteps, modalIsOpen, inProgress, actions } = this.props;
 
-        if (!this.props.inProgress) {
+        if (!inProgress) {
             return null;
         }
 
@@ -72,15 +72,8 @@ Test.propTypes = {
     actions: PropTypes.object,
 };
 
-function mapStateToProps(state) {
-    return {
-        steps: state.test.steps,
-        maxSteps: state.test.maxSteps,
-        activeStep: state.test.activeStep,
-        passedSteps: state.test.passedSteps,
-        modalIsOpen: state.test.modalIsOpen,
-        inProgress: state.test.inProgress,
-    };
+function mapStateToProps({ test: { resetButtonVisible, ...data } }) {
+    return { ...data };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -89,7 +82,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Test);
+export default connect(mapStateToProps, mapDispatchToProps)(Test);

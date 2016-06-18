@@ -56,17 +56,10 @@ Characters.propTypes = {
     actions: PropTypes.object,
 };
 
-function mapStateToProps() {
-    return { };
-}
-
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(CharactersActions, dispatch),
     };
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Characters);
+export default connect(null, mapDispatchToProps)(Characters);

@@ -20,19 +20,19 @@ export default class CharacterButtons extends Component {
     }
 
     render() {
-        const { currentStep } = this.props;
+        const { rightAnswer, givenAnswer, passed, buttons } = this.props.currentStep;
 
-        let charButtons = currentStep.buttons.map((name, i) => {
+        let charButtons = buttons.map((name, i) => {
             let color = 'blue';
 
-            if (name === currentStep.rightAnswer && currentStep.givenAnswer !== '') {
+            if (name === rightAnswer && givenAnswer !== '') {
                 color = 'green';
-            } else if (name === currentStep.givenAnswer && currentStep.givenAnswer !== currentStep.rightAnswer) {
+            } else if (name === givenAnswer && givenAnswer !== rightAnswer) {
                 color = 'red';
             }
 
-            color += (currentStep.givenAnswer !== '') ? ' disabled' : '';
-            color += (name === currentStep.givenAnswer) ? ' active' : '';
+            color += (givenAnswer !== '') ? ' disabled' : '';
+            color += (name === givenAnswer) ? ' active' : '';
 
             return (
                 <button
@@ -40,7 +40,7 @@ export default class CharacterButtons extends Component {
                   key={i}
                   className={color}
                   onClick={e => {
-                      if (!currentStep.passed) {
+                      if (!passed) {
                           e.preventDefault();
                           this.handleAnswer(e.target.innerText);
                       }
