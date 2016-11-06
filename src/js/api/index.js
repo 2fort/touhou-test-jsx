@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import _characters from '../../json/characters.json';
 import _games from '../../json/games.json';
-import _ from 'lodash';
 
 function randomNumber(scopeLength) {
     return Math.floor(Math.random() * scopeLength);

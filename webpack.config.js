@@ -10,7 +10,7 @@ module.exports = {
     ],
 
     output: {
-        path: './build',
+        path: '/build',
         publicPath: '/',
         filename: '[hash].bundle.js',
     },
@@ -34,7 +34,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot', 'babel-loader?cacheDirectory'],
+                loaders: ['babel-loader?cacheDirectory'],
             },
             {
                 test: /\.(svg|ttf|woff|woff2|eot)(\?v=\d+\.\d+\.\d+)?$/,

@@ -36,7 +36,7 @@ export default class MyModal extends Component {
                     <span className="correct">right answers: {correctAnswers}</span> <br />
                     <span className="incorrect">wrong answers: {incorrectAnswers}</span> <br />
                     <button className="blue btn-left" onClick={actions.resetTest}>
-                        <i className="fa fa-fw fa-lg fa-refresh" aria-hidden="true"></i> Reset
+                        <i className="fa fa-fw fa-lg fa-refresh" aria-hidden="true" /> Reset
                     </button>
                     <button className="green btn-right" onClick={actions.closeResultsWindow}>Close</button>
                 </div>

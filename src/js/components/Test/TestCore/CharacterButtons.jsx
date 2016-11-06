@@ -39,7 +39,7 @@ export default class CharacterButtons extends Component {
                   type="button"
                   key={i}
                   className={color}
-                  onClick={e => {
+                  onClick={(e) => {
                       if (!passed) {
                           e.preventDefault();
                           this.handleAnswer(e.target.innerText);

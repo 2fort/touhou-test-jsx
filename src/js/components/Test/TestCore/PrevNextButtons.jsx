@@ -16,7 +16,7 @@ const NextButton = ({ steps, activeStep, passedSteps, maxSteps, goNextStep, chil
     return (
         <div className="navigation">
             <button type="button" className={color} id="next" onClick={goNextStep}>
-               {children}
+                {children}
             </button>
         </div>
     );

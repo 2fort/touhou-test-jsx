@@ -9,6 +9,7 @@
     "rules": {
         "indent": ["error", 4, {"SwitchCase": 1}],
         "react/jsx-indent": ["error", 4],
-        "max-len": ["error", 125]
+        "max-len": ["error", 125],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }
