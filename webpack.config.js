@@ -73,7 +73,9 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
     ],
 
-    devtool: 'cheap-module-eval-source-map',
+    //devtool: 'cheap-module-eval-source-map',
+
+    devtool: 'eval-source-map',
 
     devServer: {
         contentBase: './src/js',

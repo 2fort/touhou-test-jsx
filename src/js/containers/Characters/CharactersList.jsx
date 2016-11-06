@@ -1,35 +1,24 @@
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
 import DocumentTitle from 'react-document-title';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
-import * as CharactersActions from '../../actions/charactersActions';
 import * as testApi from '../../api';
 
-import List from './List';
+import ListHoc from './ListHoc';
 import Grid from '../../components/Characters/CharactersList/Grid';
 import Table from '../../components/Characters/CharactersList/Table';
 
-class CharactersList extends List {
-    render() {
-        const { location: { pathname }, params: { game }, mode } = this.props;
-
-        if (!super.check()) {
-            return null;
-        }
-
-        const charsFlex = testApi.getAllCharsFromGame(game);
-
-        return (
-            <DocumentTitle title={`${testApi.getProperGameTitle(game)} | Touhou`}>
-                {mode === 'grid'
-                    ? <Grid charsFlex={charsFlex} pathname={pathname} snakeCase={_.snakeCase} />
-                    : <Table charsFlex={charsFlex} pathname={pathname} snakeCase={_.snakeCase} />
-                }
-            </DocumentTitle>
-        );
-    }
+const CharactersList = ({ location: { pathname }, params: { game }, mode }) => {
+    const charsFlex = testApi.getAllCharsFromGame(game);
+    
+    return( 
+        <DocumentTitle title={`${testApi.getProperGameTitle(game)} | Touhou`}>
+            {mode === 'grid'
+                ? <Grid charsFlex={charsFlex} pathname={pathname} snakeCase={_.snakeCase} />
+                : <Table charsFlex={charsFlex} pathname={pathname} snakeCase={_.snakeCase} />
+            }
+        </DocumentTitle>
+    );
 }
 
 CharactersList.propTypes = {
@@ -43,14 +32,4 @@ CharactersList.contextTypes = {
     router: PropTypes.object.isRequired,
 };
 
-function mapStateToProps({ characters: { mode } }) {
-    return { mode };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(CharactersActions, dispatch),
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CharactersList);
+export default ListHoc(CharactersList);
